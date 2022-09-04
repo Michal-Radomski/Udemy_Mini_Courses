@@ -1,2 +1,6 @@
 # Udemy_Mini_Courses
-Udemy.com short courses with a certificate
+
+Udemy.com mini courses with a certificate.
+
+1. Files created during course:
+   [https://www.udemy.com/course/nextjs-with-react](https://www.udemy.com/course/nextjs-with-react)
