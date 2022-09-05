@@ -1,0 +1,32 @@
+export const books = [
+  {
+    id: "1",
+    name: "Mindset",
+    description: "This is my first book",
+  },
+  {
+    id: "2",
+    name: "The Secret",
+    description: "This is my second book",
+  },
+  {
+    id: "3",
+    name: "The Money",
+    description: "This is my third book",
+  },
+  {
+    id: "4",
+    name: "Atomic Habits",
+    description: "This is my fourth book",
+  },
+  {
+    id: "5",
+    name: "Another Book",
+    description: "This is my fifth book",
+  },
+];
+
+export const fetchBookFromID = (id: string) => {
+  const fetchedBook = books.find((book) => book.id === id);
+  return fetchedBook;
+};
