@@ -1,8 +1,21 @@
 import type {NextPage} from "next";
 import Head from "next/head";
+import React from "react";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = (): JSX.Element => {
+  const [name, setName] = React.useState<string>("Unknown");
+
+  // const data = fetch("http://localhost:3000/api/hello/")
+  //   .then((response) => response.json())
+  //   .then((res) => setName(res.name));
+  // console.log({data});
+  setTimeout(() => {
+    fetch("http://localhost:3000/api/hello/")
+      .then((response) => response.json())
+      .then((res) => setName(res.name));
+  }, 1000);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,6 +26,7 @@ const Home: NextPage = (): JSX.Element => {
 
       <main className={styles.main}>
         <h1 style={{textAlign: "center"}}>Next App_3</h1>
+        <h2 style={{textAlign: "center"}}>Hello {name}</h2>
       </main>
     </div>
   );
