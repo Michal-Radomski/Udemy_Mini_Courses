@@ -1,6 +1,8 @@
 import type {NextPage} from "next";
 import Head from "next/head";
 import React from "react";
+
+import BookList from "../components/BookList";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = (): JSX.Element => {
@@ -11,7 +13,7 @@ const Home: NextPage = (): JSX.Element => {
   //   .then((res) => setName(res.name));
   // console.log({data});
   setTimeout(() => {
-    fetch("http://localhost:3000/api/hello/")
+    fetch("http://localhost:3000/api/name/")
       .then((response) => response.json())
       .then((res) => setName(res.name));
   }, 1000);
@@ -27,6 +29,8 @@ const Home: NextPage = (): JSX.Element => {
       <main className={styles.main}>
         <h1 style={{textAlign: "center"}}>Next App_3</h1>
         <h2 style={{textAlign: "center"}}>Hello {name}</h2>
+        <br />
+        <BookList />
       </main>
     </div>
   );
