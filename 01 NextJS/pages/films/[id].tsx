@@ -1,11 +1,11 @@
 import {NextPage} from "next";
 import {useRouter} from "next/router";
 
-const BookDetail: NextPage = () => {
+const FilmDetail: NextPage = () => {
   const router = useRouter();
   // console.log({router});
 
-  return <h1>Book Detail id: {router.query.id}</h1>;
+  return <h1>Film Detail id: {router.query.id}</h1>;
 };
 
-export default BookDetail;
+export default FilmDetail;
