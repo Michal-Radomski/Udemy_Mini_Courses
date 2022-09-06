@@ -8,9 +8,12 @@ const BookList = (): JSX.Element => {
   const [data, setData] = React.useState<Book[] | undefined>(undefined);
 
   const sendRequest = () => {
-    fetch("http://localhost:3000/api/books/")
+    fetch("/api/books/")
       .then((response) => response.json())
-      .then((res) => setData(res.message))
+      .then((res) => {
+        // console.log({res});
+        setData(res.message);
+      })
       .catch((err) => console.error(err));
   };
 
@@ -24,7 +27,13 @@ const BookList = (): JSX.Element => {
       <ul className={classes.listContainer}>
         {data &&
           data.map((item: Book) => (
-            <BookItem name={item.name} description={item.description} imageUrl={item.imageUrl} key={item.id} id={item.id} />
+            <BookItem
+              name={item.name}
+              description={item.description}
+              imageUrl={item.imageUrl}
+              key={item._id}
+              id={item._id as string}
+            />
           ))}
       </ul>
     </>
