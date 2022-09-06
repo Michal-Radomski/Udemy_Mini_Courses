@@ -2,6 +2,7 @@ import React from "react";
 
 import {Book} from "../Interfaces";
 import BookItem from "./BookItem";
+import classes from "../styles/Books.module.scss";
 
 const BookList = (): JSX.Element => {
   const [data, setData] = React.useState<Book[] | undefined>(undefined);
@@ -19,13 +20,13 @@ const BookList = (): JSX.Element => {
 
   return (
     <>
-      <h1>Book List</h1>
-      <u style={{listStyleType: "none"}}>
+      <h1 style={{textAlign: "center"}}>Book List</h1>
+      <ul className={classes.listContainer}>
         {data &&
           data.map((item: Book) => (
             <BookItem name={item.name} description={item.description} imageUrl={item.imageUrl} key={item.id} id={item.id} />
           ))}
-      </u>
+      </ul>
     </>
   );
 };

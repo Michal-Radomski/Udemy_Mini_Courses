@@ -2,7 +2,7 @@
 
 export interface Book {
   name: string;
-  id: string;
+  id?: string;
   description: string;
   imageUrl: string;
 }

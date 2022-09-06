@@ -7,7 +7,7 @@
   },
   {
     "id": "2",
-    "nam": "The Secret",
+    "name": "The Secret",
     "description": "This is my second book",
     "imageUrl": "https://pixabay.com/get/g990f503cf84dbe71c9faee2430c72f0a9c4ad8be9d8492db0fe09b4e44d4d61c5252017454ca442ea98b9e3605066f1541de11e2ee1513e6b13c81af864abb5c9cf8f27d693c81e3ba0f4d2bf988c27a_640.jpg"
   },
@@ -28,5 +28,11 @@
     "name": "Another Book",
     "description": "This is my fifth book",
     "imageUrl": "https://pixabay.com/get/g990f503cf84dbe71c9faee2430c72f0a9c4ad8be9d8492db0fe09b4e44d4d61c5252017454ca442ea98b9e3605066f1541de11e2ee1513e6b13c81af864abb5c9cf8f27d693c81e3ba0f4d2bf988c27a_640.jpg"
+  },
+  {
+    "name": "Next Book",
+    "description": "Description of Next Book",
+    "imageUrl": "https://pixabay.com/get/g990f503cf84dbe71c9faee2430c72f0a9c4ad8be9d8492db0fe09b4e44d4d61c5252017454ca442ea98b9e3605066f1541de11e2ee1513e6b13c81af864abb5c9cf8f27d693c81e3ba0f4d2bf988c27a_640.jpg",
+    "id": "6"
   }
 ]
