@@ -1,0 +1,20 @@
+[
+  {
+    "title": "JS",
+    "description": "Learn JS",
+    "cost": 19.99,
+    "author": "Udemy.com"
+  },
+  {
+    "title": "Sass",
+    "description": "Learn Sass",
+    "cost": 9.99,
+    "author": "Udemy.com"
+  },
+  {
+    "title": "TypeScript",
+    "description": "Learn TS",
+    "cost": 19.99,
+    "author": "Udemy.com"
+  }
+]
