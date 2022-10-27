@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head"); %>
+  </head>
+  <body>
+    <header><%- include("../partials/header") %></header>
+    <main>
+      <div class="jumbotron py-1">
+        <h1>All Courses</h1>
+        <p>Learn web development and much more.</p>
+        <h2>Courses</h2>
+        <ul>
+          <% courses.forEach(course=>{ %>
+          <li>
+            <span style="font-weight: 900"><%= course.title %></span>
+            <br />
+            <%= typeof course.description != 'undefined' ? course.description : 'No data' %> <% }) %>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer><%- include("../partials/footer") %></footer>
+  </body>
+</html>

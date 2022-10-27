@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <header><%- include("../partials/header") %></header>
+    <main>
+      <div class="jumbotron py-3">
+        <h1><%= msg %></h1>
+        <p>Learn programming</p>
+        <p>From index.ejs -> main: <%= limitedDescription %></p>
+      </div>
+      <h2>Courses</h2>
+      <div>
+        <ul>
+          <% courses.forEach(course=>{ %>
+          <li><%= course.title %></li>
+          <% }) %>
+        </ul>
+      </div>
+    </main>
+    <footer><%- include("../partials/footer") %></footer>
+
+    <!-- <script>
+      let variable = `<%= msg %>`;
+      console.log({ variable });
+      alert(JSON.stringify({ variable }));
+    </script> -->
+  </body>
+</html>
