@@ -3,7 +3,7 @@ dotenv.config({ path: "./.env" });
 import express, { Express, Request, Response } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import mysql from "mysql2";
+import mysql from "mysql";
 import cookieParser from "cookie-parser";
 
 import http from "http";
@@ -55,6 +55,10 @@ app.set("views", path.join(__dirname, "views"));
 //* Favicon
 app.get("/favicon.ico", (_req: Request, res: Response) => {
   res.sendFile(path.join(__dirname + "/public/favicon.png"));
+});
+//* Less Style
+app.get("/auth/style.less", (_req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname + "/public/style.less"));
 });
 
 // // Test Route
