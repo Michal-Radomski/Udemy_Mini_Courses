@@ -1,6 +1,10 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import express, { Express, Request, Response } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import mysql from "mysql2";
+import cookieParser from "cookie-parser";
 
 import http from "http";
 import path from "path";
@@ -20,10 +24,28 @@ app.use(
     crossOriginOpenerPolicy: false,
   })
 );
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("combined"));
+
+// MySQL DB
+const db = mysql.createConnection({
+  host: process.env.DATABASE_HOST,
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE,
+});
+// console.log({ db });
+
+db.connect((error) => {
+  if (error) {
+    console.log({ error });
+  } else {
+    console.log(`MySQL is connected at host: ${db.config.host} on port: ${db.config.port}`);
+  }
+});
 
 // View engine
 // app.set("view engine", "hbs");
