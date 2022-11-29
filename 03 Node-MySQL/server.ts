@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: "./.env" });
 import express, { Express, Request, Response } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
@@ -48,18 +48,22 @@ db.connect((error) => {
 });
 
 // View engine
-// app.set("view engine", "hbs");
-// app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
 
 //* Favicon
-// app.get("/favicon.ico", (_req: Request, res: Response) => {
-//   res.sendFile(path.join(__dirname + "/public/favicon.png"));
-// });
+app.get("/favicon.ico", (_req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname + "/public/favicon.png"));
+});
 
 // Test Route
-app.get("/test", (req: Request, res: Response) => {
+// app.get("/test", (req: Request, res: Response) => {
+//   console.log("req.ip:", req.ip);
+//   res.send("<h1 style='color:blue;text-align:center'>Server is running</h1>");
+// });
+app.get("/", (req: Request, res: Response) => {
   console.log("req.ip:", req.ip);
-  res.send("<h1 style='color:blue;text-align:center'>Server is running</h1>");
+  res.render("index", {});
 });
 
 //Route middleware
