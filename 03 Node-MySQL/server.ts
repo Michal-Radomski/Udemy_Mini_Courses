@@ -10,7 +10,8 @@ import http from "http";
 import path from "path";
 
 // Import routes
-// import indexRouter from "./indexRouter";
+import pagesRouter from "./routes/pagesRouter";
+import authRouter from "./routes/authRouter";
 
 // The server
 const app: Express = express();
@@ -56,18 +57,15 @@ app.get("/favicon.ico", (_req: Request, res: Response) => {
   res.sendFile(path.join(__dirname + "/public/favicon.png"));
 });
 
-// Test Route
+// // Test Route
 // app.get("/test", (req: Request, res: Response) => {
 //   console.log("req.ip:", req.ip);
 //   res.send("<h1 style='color:blue;text-align:center'>Server is running</h1>");
 // });
-app.get("/", (req: Request, res: Response) => {
-  console.log("req.ip:", req.ip);
-  res.render("index", {});
-});
 
 //Route middleware
-// app.use("/", indexRouter);
+app.use("/", pagesRouter);
+app.use("/auth", authRouter);
 
 // Port
 const port = (process.env.PORT || 5000) as number;
