@@ -12,7 +12,7 @@ const db = mysql.createConnection({
 });
 
 interface CustomRequest extends Request {
-  user: any;
+  user: mysql.RowDataPacket;
 }
 
 export const login: RequestHandler = async (req: Request, res: Response): Promise<void> => {
