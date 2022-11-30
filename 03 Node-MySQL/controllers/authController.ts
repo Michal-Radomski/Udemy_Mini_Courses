@@ -2,7 +2,7 @@ import { NextFunction, Request, RequestHandler, Response } from "express";
 import mysql from "mysql";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-// import { promisify } from "util";
+// import { promisify } from "util"; //* Originally - it doesn't work
 
 const db = mysql.createConnection({
   host: process.env.DATABASE_HOST,
@@ -12,6 +12,7 @@ const db = mysql.createConnection({
 });
 
 interface CustomRequest extends Request {
+  // message?: string //* Custom property;
   user?: Object;
 }
 
@@ -101,12 +102,14 @@ export const register: RequestHandler = async (req: Request, res: Response): Pro
 };
 
 export const isLoggedIn = async (req: CustomRequest, _res: Response, next: NextFunction): Promise<void> => {
-  // console.log(req.cookies);
+  // console.log("req.cookies:", req.cookies);
+  // req.message = "Inside Middleware";
   if (req.cookies.jwt) {
+    // console.log("req.cookies.jwt:", req.cookies.jwt);
     try {
       //* 1) Verify the token
+      //* Originally - it doesn't work
       // const decoded = await promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_SECRET);
-      // const decoded = await promisify(jwt.verify(req.cookies.jwt, process.env.JWT_SECRET as jwt.Secret) as Function);
       const decoded = await jwt.verify(req.cookies.jwt, process.env.JWT_SECRET as jwt.Secret);
       console.log({ decoded });
       const id = (decoded as jwt.JwtPayload).id;
@@ -138,9 +141,8 @@ export const isLoggedIn = async (req: CustomRequest, _res: Response, next: NextF
 export const logout: RequestHandler = async (req: Request, res: Response): Promise<void> => {
   console.log("req.ip:", req.ip);
   await res.cookie("jwt", "logout", {
-    expires: new Date(Date.now() + 2 * 1000),
+    expires: new Date(Date.now() + 0.5 * 1000),
     httpOnly: true,
   });
-
-  res.status(200).redirect("/");
+  await setTimeout(() => res.status(200).redirect("/"), 600);
 };

@@ -4,6 +4,7 @@ import { isLoggedIn } from "../controllers/authController";
 
 interface CustomRequest extends Request {
   user?: Object;
+  // message?: string //* Custom property;
 }
 
 const pagesRouter: Router = express.Router();
@@ -28,6 +29,7 @@ pagesRouter.get("/login", (req: Request, res: Response) => {
 pagesRouter.get("/profile", isLoggedIn, (req: CustomRequest, res: Response) => {
   // console.log("req.ip:", req.ip);
   console.log("req.user:", req.user);
+  // console.log("req.message:", req.message);
   if (req.user) {
     res.render("profile", {
       user: req.user,
