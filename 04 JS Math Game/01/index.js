@@ -14,20 +14,39 @@
 //   }
 // });
 
-const gameArea = document.querySelectorAll(".game")[0];
-// console.log(gameArea);
-const output = document.createElement("div");
-output.textContent = "hello world";
-output.val = 0;
-output.classList.add("box");
-output.addEventListener("click", (e) => {
-  output.val++;
-  output.textContent = output.val;
-  let temp = output.val % 2 ? "red" : "blue";
-  output.style.backgroundColor = temp;
-});
-gameArea.append(output);
-// document.body.prepend(output);
-// let val = gameArea.appendChild(output);
-// console.log(val);
-console.log(output);
+// const gameArea = document.querySelectorAll(".game")[0];
+// // console.log(gameArea);
+// const output = document.createElement("div");
+// output.textContent = "hello world";
+// output.val = 0;
+// output.classList.add("box");
+// output.addEventListener("click", (e) => {
+//   output.val++;
+//   output.textContent = output.val;
+//   let temp = output.val % 2 ? "red" : "blue";
+//   output.style.backgroundColor = temp;
+// });
+// gameArea.append(output);
+// // document.body.prepend(output);
+// // let val = gameArea.appendChild(output);
+// // console.log(val);
+// console.log(output);
+
+const gameArea = document.querySelector(".game");
+const btn = document.createElement("button");
+const game = { max: 10, arr: ["a", "b", "c", "d"] };
+console.log(game);
+gameArea.appendChild(btn);
+btn.textContent = "start game";
+btn.addEventListener("click", startGame);
+
+function startGame() {
+  for (let i = 0; i < 20; i++) {
+    const div = document.createElement("div");
+    // let temp = Math.floor(Math.random() * (game.max + 1));
+    let temp = Math.floor(Math.random() * game.arr.length);
+    // console.log(temp);
+    div.textContent = game.arr[temp];
+    gameArea.append(div);
+  }
+}
