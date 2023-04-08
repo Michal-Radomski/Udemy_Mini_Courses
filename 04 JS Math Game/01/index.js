@@ -32,21 +32,42 @@
 // // console.log(val);
 // console.log(output);
 
+// const gameArea = document.querySelector(".game");
+// const btn = document.createElement("button");
+// const game = { max: 10, arr: ["a", "b", "c", "d"] };
+// console.log(game);
+// gameArea.appendChild(btn);
+// btn.textContent = "start game";
+// btn.addEventListener("click", startGame);
+
+// function startGame() {
+//   for (let i = 0; i < 20; i++) {
+//     const div = document.createElement("div");
+//     // let temp = Math.floor(Math.random() * (game.max + 1));
+//     let temp = Math.floor(Math.random() * game.arr.length);
+//     // console.log(temp);
+//     div.textContent = game.arr[temp];
+//     gameArea.append(div);
+//   }
+// }
+
 const gameArea = document.querySelector(".game");
 const btn = document.createElement("button");
-const game = { max: 10, arr: ["a", "b", "c", "d"] };
-console.log(game);
+const game = { max: 10, arr: ["a", "b", "c", "d", "e"] };
+// console.log(game);
 gameArea.appendChild(btn);
 btn.textContent = "start game";
 btn.addEventListener("click", startGame);
 
 function startGame() {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < game.max; i++) {
     const div = document.createElement("div");
-    // let temp = Math.floor(Math.random() * (game.max + 1));
-    let temp = Math.floor(Math.random() * game.arr.length);
-    // console.log(temp);
-    div.textContent = game.arr[temp];
+    game.arr.sort(() => {
+      const answer = 0.5 - Math.random();
+      // console.log({ answer });
+      return answer;
+    });
+    div.textContent = game.arr.join(" ");
     gameArea.append(div);
   }
 }
