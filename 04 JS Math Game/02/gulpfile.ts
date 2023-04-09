@@ -2,7 +2,7 @@
 // CLI version: 2.3.0
 // Local version: 4.0.2
 
-const { src, dest, watch, parallel } = require("gulp");
+import { src, dest, watch, parallel } from "gulp";
 
 const sourcemaps = require("gulp-sourcemaps");
 const sass = require("gulp-sass")(require("sass"));
@@ -12,11 +12,15 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
+const ts = require("gulp-typescript");
+
+// const tsProject = ts.createProject("tsconfig.json");
 
 // File paths
 const files = {
   sassPath: "src/**/*.scss",
-  jsPath: "src/**/*.js",
+  // jsPath: "src/**/*.js",
+  tsPath: "src/**/*.ts",
   htmlPath: "dist/index.html",
 };
 
@@ -39,15 +43,26 @@ function sassTask() {
     .pipe(browserSync.stream());
 }
 
-// JS function
-function jsTask() {
-  return src([files.jsPath])
+// // JS function
+// function jsTask() {
+//   return src([files.jsPath])
+//     .pipe(uglify())
+//     .pipe(
+//       rename({
+//         suffix: ".min",
+//       })
+//     )
+//     .pipe(dest("dist"))
+//     .pipe(browserSync.stream());
+// }
+
+function tsTask() {
+  return src(files.tsPath)
+    .pipe(sourcemaps.init())
+    .pipe(ts())
+    .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
-    .pipe(
-      rename({
-        suffix: ".min",
-      })
-    )
+    .pipe(sourcemaps.write("."))
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
 }
@@ -67,7 +82,8 @@ function browser_Sync() {
 // Watch files
 function watchFiles() {
   watch(files.sassPath, sassTask);
-  watch(files.jsPath, jsTask);
+  // watch(files.jsPath, jsTask);
+  watch(files.tsPath, tsTask);
   watch(files.htmlPath).on("change", browserSync.reload);
 }
 

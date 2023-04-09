@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,KACE,kCAAA,CACA,uCAAA,CAEA,QAAA,CADA,SACA,CAEF,EACE,qBAAA","file":"index.min.css","sourcesContent":["body {\n  background-color: lightyellow !important;\n  font-family: \"Ubuntu Condensed\", sans-serif;\n  padding: 0px;\n  margin: 0px;\n}\n* {\n  box-sizing: border-box;\n}\n"]}
