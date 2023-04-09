@@ -14,7 +14,7 @@ const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
 const ts = require("gulp-typescript");
 
-// const tsProject = ts.createProject("tsconfig.json");
+const tsProject = ts.createProject("tsconfig.json");
 
 // File paths
 const files = {
@@ -59,7 +59,7 @@ function sassTask() {
 function tsTask() {
   return src(files.tsPath)
     .pipe(sourcemaps.init())
-    .pipe(ts())
+    .pipe(ts(tsProject))
     .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
