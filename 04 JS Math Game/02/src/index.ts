@@ -11,17 +11,16 @@ gameArea!.append(output);
 gameArea!.append(btn);
 
 const opts = ["*", "/", "+", "-"];
-const game = { maxValue: 10, questions: 10, oVals: [0, 2, 3], curQue: 0 };
+const game = { maxValue: 10, questions: 10, oVals: [1], curQue: 0, hiddenVal: 3 };
 
 btn.addEventListener("click", startGame);
 
-// for(let i=0;i<100;i++){
-//     let val = Math.floor(Math.random()*(game.maxValue+1));
-//     //console.log(val);
+// for (let i = 0; i < 100; i++) {
+//   let val = Math.floor(Math.random() * (game.maxValue + 1));
+//   //console.log(val);
 // }
 
 function startGame() {
-  //btn.style.display = 'none';
   game.curQue = 0;
   buildQuestion();
 }
@@ -38,15 +37,24 @@ function buildQuestion() {
       return 0.5 - Math.random();
     });
 
+    if (game.oVals[0] == 1) {
+      let temp = vals[0] * vals[1];
+      vals.unshift(temp);
+      console.log(temp);
+    } else {
+      vals[2] = eval(vals[0] + opts[game.oVals[0]] + vals[1]);
+    }
     vals[3] = opts[game.oVals[0]];
-    console.log(game.oVals);
-
-    vals[2] = eval(vals[0] + vals[3] + vals[1]);
-    let hiddenVal = Math.floor(Math.random() * 3);
-
+    console.log(vals);
+    let hiddenVal;
+    if (game.hiddenVal != 3) {
+      hiddenVal = game.hiddenVal;
+    } else {
+      hiddenVal = Math.floor(Math.random() * 3);
+    }
+    //console.log(game.oVals);
     console.log(hiddenVal);
     vals[hiddenVal] = "__";
-
     output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]} `;
   }
 }
