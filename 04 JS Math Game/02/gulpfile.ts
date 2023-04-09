@@ -21,8 +21,12 @@ const files = {
   sassPath: "src/**/*.scss",
   // jsPath: "src/**/*.js",
   tsPath: "src/**/*.ts",
-  htmlPath: "dist/index.html",
+  htmlPath: "src/index.html",
 };
+
+function htmlTask() {
+  return src(files.htmlPath).pipe(dest("dist")).pipe(browserSync.stream());
+}
 
 // Sass to CSS
 function sassTask() {
@@ -59,7 +63,7 @@ function sassTask() {
 function tsTask() {
   return src(files.tsPath)
     .pipe(sourcemaps.init())
-    .pipe(ts(tsProject))
+    .pipe(tsProject())
     .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
     .pipe(sourcemaps.write("."))
@@ -81,6 +85,7 @@ function browser_Sync() {
 
 // Watch files
 function watchFiles() {
+  watch(files.htmlPath, htmlTask);
   watch(files.sassPath, sassTask);
   // watch(files.jsPath, jsTask);
   watch(files.tsPath, tsTask);

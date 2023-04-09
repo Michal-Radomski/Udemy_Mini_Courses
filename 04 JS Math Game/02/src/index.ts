@@ -1,1 +1,1 @@
-console.log("test2");
+console.log("Hello World of Gulp and JS Math!");
