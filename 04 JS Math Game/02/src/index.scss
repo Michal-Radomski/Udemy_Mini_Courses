@@ -9,9 +9,21 @@ body {
   box-sizing: border-box;
 }
 
-.output {
+.output,
+.message {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+.question,
+.output {
+  border: 1px solid #ccc;
+}
+.gameOptions {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  font-size: 0.8em;
+  background-color: #ddd;
 }
 .boxAnswer {
   font-size: 1.4em;
