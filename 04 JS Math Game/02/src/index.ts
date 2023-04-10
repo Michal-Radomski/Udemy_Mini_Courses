@@ -129,8 +129,6 @@ function buildQuestion() {
       }
     }
     answer.focus();
-    //vals[hiddenVal] = '__';
-    //output.innerHTML = `${} ${vals[3]} ${vals[1]} = ${vals[2]} `;
   }
 }
 
