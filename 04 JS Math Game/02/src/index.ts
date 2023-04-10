@@ -57,6 +57,7 @@ function buildQuestion() {
     let vals = [];
     vals[0] = Math.floor(Math.random() * (game.maxValue + 1));
     vals[1] = Math.floor(Math.random() * (game.maxValue + 1));
+
     game.oVals.sort(() => {
       return 0.5 - Math.random();
     });
