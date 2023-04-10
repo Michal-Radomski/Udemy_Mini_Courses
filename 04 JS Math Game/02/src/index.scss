@@ -4,7 +4,44 @@ body {
   padding: 0px;
   margin: 0px;
 }
-
 * {
   box-sizing: border-box;
+}
+
+.output {
+  text-align: center;
+  font-size: 2em;
+}
+.boxAnswer {
+  font-size: 1.4em;
+  padding: 5px;
+  text-align: center;
+  width: 90px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+}
+.boxSign {
+  display: inline-block;
+  padding: 10px;
+}
+.box {
+  padding: 5px;
+  text-align: center;
+  width: 50px;
+  line-height: 45px;
+  background-color: #000;
+  border: 1px solid #ccc;
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+}
+button {
+  text-align: center;
+  margin: auto !important;
+  display: block !important;
+  padding: 10px !important;
+  // background-color: red;
+  border-radius: 10px !important;
+  font-size: 1.5em !important;
+  // color: white;
 }
