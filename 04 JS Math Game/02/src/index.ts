@@ -1,7 +1,8 @@
 const gameArea = document.querySelector(".game") as HTMLElement;
 const btn = document.createElement("button");
-btn.classList.add("btn", "btn-danger", "btn-lg");
 const btn1 = document.createElement("button");
+btn.classList.add("btn", "btn-danger", "btn-lg");
+
 btn1.classList.add("btn", "btn-primary", "btn-lg");
 const output = document.createElement("div");
 const answer = document.createElement("input");
