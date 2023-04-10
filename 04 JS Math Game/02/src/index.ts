@@ -1,8 +1,8 @@
-const gameArea = document.querySelector(".game") as HTMLElement;
+const gameArea = document.querySelector(".game") as HTMLDivElement;
+const gameOptions = document.querySelector(".gameOptions") as HTMLDivElement;
 const btn = document.createElement("button");
 const btn1 = document.createElement("button");
 btn.classList.add("btn", "btn-danger", "btn-lg");
-
 btn1.classList.add("btn", "btn-primary", "btn-lg");
 const output = document.createElement("div");
 const answer = document.createElement("input");
@@ -22,7 +22,7 @@ gameArea.append(btn);
 gameArea.append(btn1);
 btn1.style.display = "none";
 const opts = ["*", "/", "+", "-"];
-const game = { correct: "", maxValue: 2, questions: 10, oVals: [0], curQue: 0, hiddenVal: 3, inplay: false };
+const game = { correct: "", maxValue: 10, questions: 10, oVals: [0, 1, 2, 3], curQue: 0, hiddenVal: 3, inplay: false };
 const player = { correct: 0, incorrect: 0 };
 btn.addEventListener("click", btnCheck);
 btn1.addEventListener("click", buildQuestion);
@@ -55,6 +55,9 @@ function btnCheck() {
     answer.disabled = true;
     nextQuestion();
   } else {
+    //start Game
+    getValues();
+    gameOptions.style.display = "none";
     game.curQue = 0;
     buildQuestion();
   }
@@ -67,6 +70,20 @@ function nextQuestion() {
 function scoreBoard() {
   message.innerHTML = `${game.curQue} of ${game.questions} Questions<br>`;
   message.innerHTML += `Correct : (${player.correct}) vs (${player.incorrect})`;
+}
+
+function getValues() {
+  game.maxValue = Number(document.querySelector("#maxVal" as any)!.value);
+  game.questions = document.querySelector("#numQuestions" as any)!.value;
+  let temp = document.querySelector("#selOpt" as any);
+  let tempArr = [];
+  for (let i = 0; i < temp.options.length; i++) {
+    if (temp.options[i].selected) {
+      tempArr.push(i);
+    }
+  }
+  game.oVals = tempArr;
+  console.log(game);
 }
 
 function buildQuestion() {
@@ -129,6 +146,8 @@ function buildQuestion() {
       }
     }
     answer.focus();
+    //vals[hiddenVal] = '__';
+    //output.innerHTML = `${} ${vals[3]} ${vals[1]} = ${vals[2]} `;
   }
 }
 
