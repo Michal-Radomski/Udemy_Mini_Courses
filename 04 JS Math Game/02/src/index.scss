@@ -4,6 +4,7 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -37,7 +38,7 @@ body {
 }
 button {
   text-align: center;
-  margin: auto !important;
+  margin: 20px auto !important;
   display: block !important;
   padding: 10px !important;
   // background-color: red;

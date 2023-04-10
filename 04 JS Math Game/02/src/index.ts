@@ -1,6 +1,6 @@
 const gameArea = document.querySelector(".game");
 const btn = document.createElement("button");
-btn.classList.add("btn", "btn-danger");
+btn.classList.add("btn", "btn-danger", "btn-lg");
 const output = document.createElement("div");
 const answer = document.createElement("input");
 output.textContent = "Click the button to start the game";
@@ -14,18 +14,33 @@ gameArea!.append(output);
 gameArea!.append(btn);
 
 const opts = ["*", "/", "+", "-"];
-const game = { maxValue: 10, questions: 10, oVals: [1], curQue: 0, hiddenVal: 3 };
+const game = { maxValue: 2, questions: 10, oVals: [1], curQue: 0, hiddenVal: 3, inplay: false };
 
-btn.addEventListener("click", startGame);
+btn.addEventListener("click", btnCheck);
 
-// for (let i = 0; i < 100; i++) {
-//   let val = Math.floor(Math.random() * (game.maxValue + 1));
-//   //console.log(val);
-// }
+answer.addEventListener("keyup", (e) => {
+  console.log(e.code);
+  console.log(answer.value.length);
+  if (answer.value.length > 0) {
+    btn.style.display = "block";
+    btn.textContent = "check";
+    game.inplay = true;
+  }
+  if (e.code == "Enter") {
+    game.inplay = true;
+    btnCheck();
+  }
+});
 
-function startGame() {
-  game.curQue = 0;
-  buildQuestion();
+function btnCheck() {
+  if (game.inplay) {
+    console.log("check");
+    answer.disabled = true;
+  } else {
+    btn.style.display = "none";
+    game.curQue = 0;
+    buildQuestion();
+  }
 }
 
 function buildQuestion() {
@@ -38,39 +53,42 @@ function buildQuestion() {
     game.oVals.sort(() => {
       return 0.5 - Math.random();
     });
-    if (game.oVals[0] === 1) {
+    console.log(vals);
+    if (game.oVals[0] == 1) {
+      if (vals[0] == 0) {
+        {
+          vals[0] = 1;
+        }
+      }
+      console.log(vals);
       let temp = vals[0] * vals[1];
       vals.unshift(temp);
-      console.log({ temp });
     } else {
       vals[2] = eval(vals[0] + opts[game.oVals[0]] + vals[1]);
     }
     vals[3] = opts[game.oVals[0]];
-    console.log({ vals });
     let hiddenVal;
-    if (game.hiddenVal !== 3) {
+    if (game.hiddenVal != 3) {
       hiddenVal = game.hiddenVal;
     } else {
       hiddenVal = Math.floor(Math.random() * 3);
     }
-    //console.log(game.oVals);
-    console.log({ hiddenVal });
     answer.value = "";
+
     for (let i = 0; i < 3; i++) {
-      if (hiddenVal === i) {
+      if (hiddenVal == i) {
         output.append(answer);
       } else {
         maker(vals[i], "box");
       }
-
-      if (i === 0) {
+      if (i == 0) {
         maker(vals[3], "boxSign");
       }
-      if (i === 1) {
+      if (i == 1) {
         maker("=", "boxSign");
       }
     }
-
+    answer.focus();
     //vals[hiddenVal] = '__';
     //output.innerHTML = `${} ${vals[3]} ${vals[1]} = ${vals[2]} `;
   }
