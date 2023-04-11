@@ -8,3 +8,5 @@ Udemy.com mini courses with a certificate.
 2. Files created during [EJS Course](https://www.udemy.com/course/ejs-fullstack-web-development-masterclass).
 
 3. Files created during [NodeJS MySQL Login System](https://www.udemy.com/course/the-complete-nodejs-mysql-login-system).
+
+4. Files created during [JS Math Games project](https://www.udemy.com/course/javascript-math-game).
