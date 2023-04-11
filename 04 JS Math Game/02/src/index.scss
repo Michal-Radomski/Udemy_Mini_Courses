@@ -4,7 +4,6 @@ body {
   padding: 0px;
   margin: 0px;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -12,7 +11,11 @@ body {
 .output,
 .message {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+.question,
+.output {
+  border: 1px solid #ccc;
 }
 .gameOptions {
   text-align: center;
@@ -47,10 +50,31 @@ body {
   color: white;
   border-radius: 10px;
 }
-button {
+.myBtn {
+  border: 2px solid black;
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  color: white;
+  padding: 5px;
+  margin: 0 10px;
+}
+.csvBtn {
   text-align: center;
   margin: 20px auto !important;
-  display: block !important;
+  // display: block;
+  padding: 10px !important;
+  // background-color: green;
+  border-radius: 10px;
+  font-size: 1.5em;
+  // color: white;
+}
+.startBtn {
+  text-align: center;
+  margin: 20px auto !important;
+  display: block;
   padding: 10px !important;
   // background-color: red;
   border-radius: 10px !important;
