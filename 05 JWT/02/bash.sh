@@ -46,3 +46,11 @@ openssl rsa -in private.pem -out public.pem -pubout -outform PEM
 # jFKZapZ6zLyCL/THBLGWoRK1yJLtnlV7l2cU5JybzmgoOzkIVDKdO4k7yJSeH3g3
 # nQIDAQAB
 # -----END PUBLIC KEY-----
+
+# Mamanually creating RS256 Signature
+echo -n "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTIwOTYxNTksImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MjEwNTE1OSwidXNlcklkIjoiYWRtaW4iLCJpc0FkbWluIjoidHJ1ZSJ9" | openssl dgst -sha256 -sign private.key | openssl base64 -e -A | sed s/\+/-/g | sed 's/\//_/g' | sed -E s/=+$//
+
+# output
+# PYyYPnnP1FzrhMP6iyx3-AY0AUj13sgeubEoMIyflF6Fu1VwDFLB1fDQXfUzoyrJRsoQFEMmnXsxsECrvRaIeDtNLEyA9tKL_L_jkAzwJU6yGerGDK693rx6aaoVA56Iptq0DEjjriXljZ1MVCXI7rs-Wp2QqG8i7pZnqQtiUxNWA2QNz1AVVPm9NKSMzTx353DUoAby5J13Ls322sdfpNveLCGQEKT79l-01c2U1kKttk6gtLiTLm4gLE37hUesK5dqG9PpiVuDLZAcxlntl--LCxEkCDtXLeuEZE2szrraQq8lW7XsLEjfld-jA80MNJ6JAg3C_7nsuWJUKMZ1iA
+
+# Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTIwOTYxNTksImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY5MjEwNTE1OSwidXNlcklkIjoiYWRtaW4iLCJpc0FkbWluIjoidHJ1ZSJ9.PYyYPnnP1FzrhMP6iyx3-AY0AUj13sgeubEoMIyflF6Fu1VwDFLB1fDQXfUzoyrJRsoQFEMmnXsxsECrvRaIeDtNLEyA9tKL_L_jkAzwJU6yGerGDK693rx6aaoVA56Iptq0DEjjriXljZ1MVCXI7rs-Wp2QqG8i7pZnqQtiUxNWA2QNz1AVVPm9NKSMzTx353DUoAby5J13Ls322sdfpNveLCGQEKT79l-01c2U1kKttk6gtLiTLm4gLE37hUesK5dqG9PpiVuDLZAcxlntl--LCxEkCDtXLeuEZE2szrraQq8lW7XsLEjfld-jA80MNJ6JAg3C_7nsuWJUKMZ1iA
