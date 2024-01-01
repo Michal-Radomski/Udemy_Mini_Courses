@@ -1,4 +1,4 @@
-# Udemy_Mini_Courses
+# Udemy Mini Courses
 
 Udemy.com mini courses with a certificate.
 
