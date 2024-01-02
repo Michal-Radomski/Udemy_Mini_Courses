@@ -1,10 +1,24 @@
 import React from "react";
-// import Typical from "react-typical";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 // import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.scss";
 
 const Profile = (): JSX.Element => {
+  const [typeEffect] = useTypewriter({
+    words: [
+      "Enthusiastic Dev 😎",
+      "Full stack Developer 💻",
+      "Mern stack Dev 📱",
+      "Cross Platform Dev 🔴",
+      "React/React Native 🌐",
+    ],
+    loop: 0,
+    typeSpeed: 100,
+    deleteSpeed: 50,
+    delaySpeed: 1000,
+  });
+
   return (
     <React.Fragment>
       <div className="profile-container">
@@ -37,21 +51,8 @@ const Profile = (): JSX.Element => {
             <div className="profile-details-role">
               <span className="primary-text">
                 <h1>
-                  {/* <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Enthusiastic Dev 😎",
-                    1000,
-                    "Full stack Developer 💻",
-                    1000,
-                    "Mern stack Dev 📱",
-                    1000,
-                    "Cross Platform Dev 🔴",
-                    1000,
-                    "React/React Native 🌐",
-                    1000,
-                  ]}
-                /> */}
+                  <span style={{ fontWeight: "bold", color: "green", marginLeft: "0.25rem" }}>{typeEffect}</span>
+                  <Cursor cursorStyle="|" cursorColor="deeppink" cursorBlinking={true} />
                 </h1>
               </span>
               <span className="profile-role-tagline">
