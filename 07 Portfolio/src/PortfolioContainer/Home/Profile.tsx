@@ -8,15 +8,15 @@ const Profile = (): JSX.Element => {
   const [typeEffect] = useTypewriter({
     words: [
       "Enthusiastic Dev 😎",
-      "Full stack Developer 💻",
-      "Mern stack Dev 📱",
+      "Full Stack Developer 💻",
+      "Mern Stack Dev 📱",
       "Cross Platform Dev 🔴",
       "React/React Native 🌐",
     ],
-    loop: 0,
-    typeSpeed: 100,
-    deleteSpeed: 50,
-    delaySpeed: 1000,
+    loop: false,
+    typeSpeed: 85,
+    deleteSpeed: 40,
+    delaySpeed: 1500,
   });
 
   return (
@@ -65,9 +65,9 @@ const Profile = (): JSX.Element => {
                 className="btn primary-btn"
                 // onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
               >
-                {" Hire Me "}
+                Hire Me
               </button>
-              <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
+              <a href="resume.pdf" download="Ehiedu_Ehizcv.pdf">
                 <button className="btn highlighted-btn">Get Resume</button>
               </a>
             </div>

@@ -17,4 +17,4 @@ Udemy.com mini courses with a certificate.
    [Learn API Technical Writing: JSON and XML](https://www.udemy.com/course/api-documentation-1-json-and-xml).
 
 7. Files created during
-   [React Js Responsive Portfolio Website](https://www.udemy.com/course/the-ultimate-react-js-responsive-portfolio-website).
+   [ReactJS Responsive Portfolio Website](https://www.udemy.com/course/the-ultimate-react-js-responsive-portfolio-website).
