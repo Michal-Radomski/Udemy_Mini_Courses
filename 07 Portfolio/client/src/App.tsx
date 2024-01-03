@@ -1,14 +1,12 @@
 import React from "react";
 
 import "./App.scss";
-import Profile from "./PortfolioContainer/Home/Profile";
-import Footer from "./PortfolioContainer/Home/Footer/Footer";
+import Home from "./PortfolioContainer/Home/Home";
 
 function App(): JSX.Element {
   return (
     <React.Fragment>
-      <Profile />
-      <Footer />
+      <Home />
     </React.Fragment>
   );
 }
