@@ -51,7 +51,7 @@ const Profile = (): JSX.Element => {
             <div className="profile-details-role">
               <span className="primary-text">
                 <h1>
-                  <span style={{ fontWeight: "bold", color: "green", marginLeft: "0.25rem" }}>{typeEffect}</span>
+                  <span style={{ fontWeight: "bold", marginLeft: "0.25rem" }}>{typeEffect}</span>
                   <Cursor cursorStyle="|" cursorColor="deeppink" cursorBlinking={true} />
                 </h1>
               </span>
