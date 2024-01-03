@@ -1,12 +1,12 @@
 import React from "react";
 
 import "./App.scss";
-import Home from "./PortfolioContainer/Home/Home";
+import PortfolioContainer from "./PortfolioContainer/PortfolioContainer";
 
 function App(): JSX.Element {
   return (
     <React.Fragment>
-      <Home />
+      <PortfolioContainer />
     </React.Fragment>
   );
 }
