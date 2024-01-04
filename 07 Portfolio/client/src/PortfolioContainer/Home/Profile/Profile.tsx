@@ -1,7 +1,7 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-// import ScrollService from "../../../utilities/ScrollService";
+import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.scss";
 
 const Profile = (): JSX.Element => {
@@ -61,10 +61,7 @@ const Profile = (): JSX.Element => {
             </div>
 
             <div className="profile-options">
-              <button
-                className="btn primary-btn"
-                // onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-              >
+              <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
                 Hire Me
               </button>
               <a href="resume.pdf" download="Ehiedu_Ehizcv.pdf">

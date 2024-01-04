@@ -8,6 +8,7 @@ export const TOTAL_SCREENS = [
   {
     screen_name: "Home",
     component: Home,
+    alreadyRendered: undefined as unknown,
   },
   // {
   //   screen_name: "AboutMe",
