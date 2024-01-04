@@ -37,7 +37,7 @@ export default function Header(): JSX.Element {
   };
 
   const switchScreen = (index: number, screen: ScreenI) => {
-    let screenComponent = document.getElementById(screen.screen_name);
+    const screenComponent = document.getElementById(screen.screen_name);
     if (!screenComponent) return;
 
     screenComponent.scrollIntoView({ behavior: "smooth" });
@@ -58,7 +58,7 @@ export default function Header(): JSX.Element {
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
-          <span>HELLO</span>
+          <span>HELLO~</span>
         </div>
         <div className={showHeaderOptions ? "header-options show-hamburger-options" : "header-options"}>
           {getHeaderOptions()}
