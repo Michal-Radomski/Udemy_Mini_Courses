@@ -10,14 +10,14 @@ export default function Header(): JSX.Element {
   const [selectedScreen, setSelectedScreen] = React.useState<number>(0);
   const [showHeaderOptions, setShowHeaderOptions] = React.useState<boolean>(false);
 
-  const updateCurrentScreen = (currentScreen: any) => {
-    console.log({ currentScreen });
+  const updateCurrentScreen = (currentScreen: { screenInView: string }) => {
+    // console.log("currentScreen:", currentScreen);
     if (!currentScreen || !currentScreen.screenInView) return;
 
     const screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
   };
-  const currentScreenSubscription = ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
+  const currentScreenSubscription = ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen as any);
 
   const getHeaderOptions = () => {
     return TOTAL_SCREENS.map((Screen, i) => (
