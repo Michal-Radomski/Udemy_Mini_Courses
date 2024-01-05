@@ -5,7 +5,11 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-  <React.StrictMode>
+  //* React-owl-carousel is outdated!
+  // <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>
+  </React.Fragment>
+
+  // </React.StrictMode>
 );
