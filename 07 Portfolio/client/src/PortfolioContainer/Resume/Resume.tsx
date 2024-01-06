@@ -9,7 +9,7 @@ const Resume = (props: { id: string }): JSX.Element => {
   const [selectedBulletIndex, setSelectedBulletIndex] = React.useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = React.useState({} as any);
 
-  let fadeInScreenHandler = (screen: { fadeInScreen: string }) => {
+  let fadeInScreenHandler = (screen: { fadeInScreen: string }): void => {
     if (screen.fadeInScreen !== props.id) return;
 
     Animations.animations.fadeInScreen(props.id);
@@ -23,7 +23,7 @@ const Resume = (props: { id: string }): JSX.Element => {
     toDate?: string;
     subHeading?: string;
     description?: string;
-  }) => {
+  }): JSX.Element => {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
@@ -189,8 +189,8 @@ const Resume = (props: { id: string }): JSX.Element => {
     </div>,
   ];
 
-  const handleCarousal = (index: number) => {
-    let offsetHeight = 360;
+  const handleCarousal = (index: number): void => {
+    const offsetHeight = 360;
 
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
