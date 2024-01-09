@@ -2,7 +2,14 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
-  theme: {},
+  theme: {
+    extend: {
+      fontFamily: {
+        body: "var(--font-dm-sans)",
+        heading: "var(--font-dm-serif)",
+      },
+    },
+  },
   plugins: [],
 };
 export default config;

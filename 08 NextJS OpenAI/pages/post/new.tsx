@@ -5,8 +5,8 @@ export default function NewPost(): JSX.Element {
   return <React.Fragment>NewPost</React.Fragment>;
 }
 
-export const getServerSideProps = withPageAuthRequired(() => {
-  return {
-    props: {},
-  };
-});
+// export const getServerSideProps = withPageAuthRequired(() => {
+//   return {
+//     props: {},
+//   };
+// });
