@@ -1,4 +1,8 @@
-type RootState = ReturnType<typeof store.getState>;
+declare module "@webdeveducation/next-verify-stripe";
+
+import type { AppProps } from "next/app";
+
+type RootState = ReturnType<typeof store.getState> | AppProps;
 type AppDispatch = typeof store.dispatch;
 type Fetch = typeof store.fetch;
 type Action = typeof store.action;
