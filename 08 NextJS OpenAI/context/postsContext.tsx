@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Action, IPost, RootState } from "@/Interfaces";
+
 const PostsContext = React.createContext({});
 export default PostsContext;
 

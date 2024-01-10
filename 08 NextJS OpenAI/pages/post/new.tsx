@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 import { AppLayout } from "../../components/AppLayout";
 import { getAppProps } from "../../utils/getAppProps";
+import { RootState } from "@/Interfaces";
 
 export default function NewPost(): JSX.Element {
   const router = useRouter();

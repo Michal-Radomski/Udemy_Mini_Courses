@@ -9,6 +9,7 @@ import { AppLayout } from "../../components/AppLayout";
 import PostsContext from "../../context/postsContext";
 import clientPromise from "../../lib/mongodb";
 import { getAppProps } from "../../utils/getAppProps";
+import { RootState } from "@/Interfaces";
 
 export default function Post(props: RootState): JSX.Element {
   console.log("PROPS: ", props);

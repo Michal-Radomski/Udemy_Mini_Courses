@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import PostsContext from "../context/postsContext";
 import { Logo } from "./Logo";
+import { IPost } from "@/Interfaces";
 
 export const AppLayout = ({
   children,

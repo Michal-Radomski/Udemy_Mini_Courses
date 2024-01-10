@@ -1,6 +1,6 @@
 import React from "react";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
-import { DM_Sans, DM_Serif_Display } from "@next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -9,6 +9,7 @@ config.autoAddCss = false;
 
 import "@/styles/globals.scss";
 import "@/styles/globals.css";
+import { RootState } from "@/Interfaces";
 
 const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
