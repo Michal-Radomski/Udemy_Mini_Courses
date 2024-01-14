@@ -12,7 +12,7 @@ import { getAppProps } from "../../utils/getAppProps";
 import { RootState } from "@/Interfaces";
 
 export default function Post(props: RootState): JSX.Element {
-  console.log("PROPS: ", props);
+  // console.log("PROPS: ", props);
   const router = useRouter();
   const [showDeleteConfirm, setShowDeleteConfirm] = React.useState<boolean>(false);
   const { deletePost } = React.useContext(PostsContext) as any;
@@ -87,10 +87,12 @@ Post.getLayout = function getLayout(page: JSX.Element, pageProps: RootState): JS
 
 export const getServerSideProps = withPageAuthRequired({
   async getServerSideProps(ctx) {
+    // console.log("ctx:", ctx);
     const props = await getAppProps(ctx);
     const userSession = await getSession(ctx.req, ctx.res);
     const client = await clientPromise;
     const db = client.db("BlogStandard");
+    // console.log("db:", db);
     const user = await db.collection("users").findOne({
       auth0Id: userSession?.user.sub,
     });

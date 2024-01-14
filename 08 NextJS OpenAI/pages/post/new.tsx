@@ -26,7 +26,7 @@ export default function NewPost(): JSX.Element {
         body: JSON.stringify({ topic, keywords }),
       });
       const json = await response.json();
-      console.log("RESULT: ", json);
+      // console.log("RESULT: ", json);
       if (json?.postId) {
         router.push(`/post/${json.postId}`);
       }

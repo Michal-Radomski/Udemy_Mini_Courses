@@ -6,7 +6,7 @@ import { RootState } from "@/Interfaces";
 
 export default function TokenTopup(): JSX.Element {
   const handleClick = async () => {
-    const result = await fetch(`/api/addTokens`, {
+    const result = await fetch("/api/addTokens", {
       method: "POST",
     });
     const json = await result.json();
@@ -30,6 +30,7 @@ TokenTopup.getLayout = function getLayout(page: JSX.Element, pageProps: RootStat
 
 export const getServerSideProps = withPageAuthRequired({
   async getServerSideProps(ctx) {
+    // console.log("ctx:", ctx);
     const props = await getAppProps(ctx);
     return {
       props,

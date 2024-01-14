@@ -31,6 +31,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       console.log("ERROR: ", { error });
     }
 
+    // console.log("event:", event);
+
     switch (event.type) {
       case "payment_intent.succeeded": {
         const client = await clientPromise;
@@ -39,7 +41,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         const paymentIntent = event.data.object;
         const auth0Id = paymentIntent.metadata.sub;
 
-        console.log("AUTH 0 ID: ", paymentIntent);
+        // console.log("AUTH 0 ID: ", paymentIntent);
 
         await db.collection("users").updateOne(
           { auth0Id },
@@ -57,7 +59,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         );
       }
       default:
-        console.log("UNHANDLED EVENT: ", event.type);
+        console.log("Event type: ", event.type);
     }
     res.status(200).json({ received: true });
   }

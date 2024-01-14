@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useUser } from "@auth0/nextjs-auth0/client";
+// import { useUser } from "@auth0/nextjs-auth0/client";
 
 import { Logo } from "../components/Logo";
 import HeroImage from "../public/hero.webp";
 
 export default function Home(): JSX.Element {
-  const { user } = useUser();
-  console.log("user:", user);
+  // const { user } = useUser();
+  // console.log("user:", user);
 
   return (
     <React.Fragment>
