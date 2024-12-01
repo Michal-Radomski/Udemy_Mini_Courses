@@ -1,0 +1,97 @@
+### Overview of JSON with Comments, JSON5, JSON-LD, and JSONiq
+
+JSON with comments, JSON5, JSON-LD, and JSONiq are all variations or extensions of the standard JSON (JavaScript Object Notation) format, each designed to address specific needs in data representation and manipulation. Here’s a detailed explanation of each:
+
+#### 1. JSON with Comments
+
+- **Definition**: Standard JSON does not support comments. This limitation can make it challenging to annotate data structures for human readers without complicating parsing processes.
+
+- **Workarounds**: To include comments in JSON files, developers often use workarounds such as:
+  - **Dummy Keys**: Adding keys that begin with an underscore or another character to hold comment strings.
+    ```json
+    {
+        "_comment": "This is a comment",
+        "name": "John Doe",
+        "age": 30
+    }
+    ```
+  - **External Documentation**: Maintaining separate documentation files to explain the structure and purpose of the JSON data.
+
+- **Why No Comments?**: The creator of JSON, Douglas Crockford, removed comments to maintain simplicity and ensure that JSON remains a pure data format without parsing complications [1][6].
+
+#### 2. JSON5
+
+- **Definition**: JSON5 is an extension of JSON that adds several features to make it more human-friendly, including support for comments.
+
+- **Comment Support**: JSON5 allows both single-line (`//`) and multi-line (`/* ... */`) comments, similar to JavaScript syntax.
+  ```json5
+  // This is a single-line comment
+  {
+      "name": "Alice",
+      "age": 30,
+      /* This is a multi-line comment */
+      "isStudent": false
+  }
+  ```
+
+- **Usage**: While not natively supported in most environments, libraries like `json5` can be used to parse JSON5 files in JavaScript applications [2].
+
+#### 3. JSON-LD (JSON for Linked Data)
+
+- **Definition**: JSON-LD is a lightweight Linked Data format that uses JSON to represent structured data. It is designed to interlink data across different sources on the web.
+
+- **Purpose**: The primary goal of JSON-LD is to provide context for data so that it can be understood by machines. It enables the representation of relationships between different entities using linked data principles.
+
+- **Example**:
+  ```json
+  {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "http://johndoe.com"
+  }
+  ```
+  
+- **Use Cases**: Commonly used in web applications for SEO purposes and to enhance search engine understanding of web content through structured data [1].
+
+#### 4. JSONiq
+
+- **Definition**: JSONiq is a query language specifically designed for querying and transforming JSON data. It allows users to perform complex queries in a declarative manner.
+
+- **Key Features**:
+  - Supports FLWOR expressions (For, Let, Where, Order By, Return).
+  - Allows dynamic construction and manipulation of JSON objects.
+  
+- **Example Usage**:
+  ```jsoniq
+  let $data := collection("myData")
+  for $item in $data
+  return {
+      "name": $item.name,
+      "value": $item.value * 2
+  }
+  ```
+  
+- **Applications**: Useful in environments where complex queries on semi-structured data are required, particularly in NoSQL databases [1].
+
+### Summary Table
+
+| Feature       | Description                                                                 | Comments Support                      | Use Cases                                           |
+|---------------|-----------------------------------------------------------------------------|--------------------------------------|-----------------------------------------------------|
+| JSON          | Standard format for data interchange                                        | No                                   | Data transmission between server and client        |
+| JSON with Comments | Workarounds exist to include comments                                  | Indirectly via dummy keys           | Annotating data structures                           |
+| JSON5        | Extension of JSON with added features                                       | Yes (single & multi-line)           | More human-readable configuration files              |
+| JSON-LD     | Linked Data format using JSON for structured data                          | No                                   | Enhancing web content understanding                  |
+| JSONiq       | Query language for querying and transforming JSON                          | No                                   | Complex queries in NoSQL databases                   |
+
+In conclusion, while standard JSON lacks support for comments, alternatives like JSON5 provide this functionality alongside other enhancements. Meanwhile, formats like JSON-LD focus on semantic web applications, and languages like JSONiq cater to querying needs within the realm of structured data.
+
+Citations:
+[1] https://www.freecodecamp.org/news/comments-in-json/
+[2] https://codedamn.com/news/javascript/comments-inside-json
+[3] https://stackoverflow.com/questions/244777/can-comments-be-used-in-json/55547317
+[4] https://www.geeksforgeeks.org/how-to-comment-in-json-files/
+[5] https://www.npmjs.com/package/comment-json
+[6] https://reqbin.com/json/5wzepqmt/json-comment-example
+[7] https://code.visualstudio.com/Docs/languages/json
+[8] https://dev.to/zirkelc/how-to-use-json-with-comments-for-configs-2clc
