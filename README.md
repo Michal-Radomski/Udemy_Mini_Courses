@@ -21,3 +21,5 @@ Udemy.com mini courses with a certificate.
    [ReactJS Responsive Portfolio Website](https://www.udemy.com/course/the-ultimate-react-js-responsive-portfolio-website).
 
 8. Files created during this course: [Next JS & Open AI / GPT](https://www.udemy.com/course/next-js-ai).
+
+9. Files created during this course: [YAML JSON JSONPath](https://www.udemy.com/course/ultimate-yaml-json-jsonpath-tutorial).
