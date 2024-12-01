@@ -1,0 +1,161 @@
+To implement a REST API with JSONP in Express and query it in a React application, follow these steps:
+
+## Setting Up a JSONP API with Express
+
+1. **Create an Express Server**:
+   First, set up an Express server that can handle JSONP requests.
+
+   ```javascript
+   const express = require('express');
+   const app = express();
+   const port = 3000;
+
+   // Sample data
+   const data = {
+       fruits: [
+           { id: 1, name: 'Apple' },
+           { id: 2, name: 'Banana' },
+           { id: 3, name: 'Orange' }
+       ]
+   };
+
+   // JSONP endpoint
+   app.get('/api/fruits', (req, res) => {
+       const callback = req.query.callback;
+       res.jsonp(data); // Automatically wraps the response in the callback function
+   });
+
+   app.listen(port, () => {
+       console.log(`Server running at http://localhost:${port}`);
+   });
+   ```
+
+2. **Run the Server**:
+   Save the above code in a file (e.g., `server.js`) and run it using Node.js:
+   ```bash
+   node server.js
+   ```
+
+## Querying the JSONP API in React
+
+1. **Set Up a React Application**:
+   Create a new React application if you haven't already.
+
+   ```bash
+   npx create-react-app my-app
+   cd my-app
+   ```
+
+2. **Install Axios** (optional):
+   If you prefer using Axios for HTTP requests, install it:
+   ```bash
+   npm install axios
+   ```
+
+3. **Fetch Data Using JSONP**:
+   You can use the `jsonp` library or simply create a script tag to fetch data from your JSONP endpoint.
+
+### Using Axios with JSONP
+
+If you want to use Axios with JSONP, you can use a library like `axios-jsonp`. First, install it:
+
+```bash
+npm install axios-jsonp
+```
+
+Then, implement the fetching in your component:
+
+```javascript
+import React, { useEffect, useState } from 'react';
+import axios from 'axios-jsonp';
+
+const App = () => {
+    const [fruits, setFruits] = useState([]);
+
+    useEffect(() => {
+        axios({
+            url: 'http://localhost:3000/api/fruits',
+            method: 'GET',
+            params: { callback: 'callback' } // Specify the callback parameter for JSONP
+        })
+        .then(response => {
+            setFruits(response.data.fruits);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }, []);
+
+    return (
+        <div>
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map(fruit => (
+                    <li key={fruit.id}>{fruit.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default App;
+```
+
+### Using Fetch API with JSONP
+
+Alternatively, you can use the native `fetch` API by creating a script tag manually:
+
+```javascript
+import React, { useEffect, useState } from 'react';
+
+const App = () => {
+    const [fruits, setFruits] = useState([]);
+
+    useEffect(() => {
+        const fetchData = () => {
+            const script = document.createElement('script');
+            script.src = 'http://localhost:3000/api/fruits?callback=handleResponse';
+            document.body.appendChild(script);
+
+            window.handleResponse = (data) => {
+                setFruits(data.fruits);
+                document.body.removeChild(script); // Clean up script tag after loading data
+                delete window.handleResponse; // Clean up the global function
+            };
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map(fruit => (
+                    <li key={fruit.id}>{fruit.name}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+export default App;
+```
+
+### Summary
+
+- **Express Setup**: You create an Express server that responds to GET requests with JSONP.
+- **React Fetching**: In your React application, you can either use Axios with a JSONP adapter or manually create a script tag to fetch data.
+- **Dynamic Data Handling**: The fetched data is then displayed in your React component.
+
+This approach allows you to effectively implement and query a REST API using JSONP in an Express server and consume it within a React application.
+
+Citations:
+[1] https://www.linkedin.com/pulse/building-search-bar-filter-data-from-json-file-reactjs-ajeet-achal
+[2] https://www.pluralsight.com/resources/blog/guides/fetch-data-from-a-json-file-in-a-react-app
+[3] https://builtin.com/software-engineering-perspectives/use-query-react
+[4] https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html
+[5] https://www.reddit.com/r/reactjs/comments/14g50cp/how_to_use_local_json_files_as_datasource_in/
+[6] https://www.webdevelopment.co.nz/post/json-vs-jsonp-explained-with-detailed-web-request-samples
+[7] https://apidog.com/blog/reactjs-query/
+[8] https://refine.dev/blog/react-query-guide/

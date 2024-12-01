@@ -1,0 +1,50 @@
+JSONP and JSONPath are distinct concepts in the realm of web development and data manipulation, and they serve different purposes.
+
+### JSONP (JSON with Padding)
+
+- **Definition**: JSONP stands for "JSON with Padding." It is a technique used to overcome the limitations imposed by the same-origin policy in web browsers. This policy restricts web pages from making requests to a different domain than the one that served the web page.
+
+- **How It Works**: JSONP allows you to request data from a server in a different domain by wrapping the JSON response in a function call. For example, instead of returning plain JSON:
+  ```json
+  {"name": "example"}
+  ```
+  The server responds with:
+  ```javascript
+  myCallback({"name": "example"});
+  ```
+  Here, `myCallback` is a function defined on the client side that will be executed with the JSON data as its argument when the script is loaded.
+
+- **Use Case**: It is primarily used for making cross-domain requests, particularly for GET requests. JSONP can be useful for loading data from APIs hosted on different domains without running into cross-origin issues[2][5][6].
+
+### JSONPath
+
+- **Definition**: JSONPath is a query language for JSON, similar to XPath for XML. It provides a way to navigate through and extract data from JSON structures using a set of expressions.
+
+- **How It Works**: JSONPath expressions allow users to specify paths to access specific elements within a JSON document. For example:
+  - `$.store.book[*].title` retrieves the titles of all books in a store.
+  - `$..author` fetches all authors from any level of the JSON structure.
+
+- **Use Case**: It is commonly used in programming environments where there is a need to extract or manipulate data from complex JSON objects, making it easier to work with structured data[1][4].
+
+### Summary of Differences
+
+| Feature        | JSONP                                      | JSONPath                                 |
+|----------------|--------------------------------------------|------------------------------------------|
+| Purpose        | Bypass same-origin policy for cross-domain requests | Query and extract data from JSON structures |
+| Format         | JavaScript function call wrapping JSON data | Path expressions for navigating JSON    |
+| Use Case       | Loading data from external APIs            | Data extraction and manipulation         |
+| Example        | `myCallback({"name": "example"});`       | `$.store.book[*].title`                 |
+
+### Conclusion
+
+In summary, **JSONP** is a method for fetching data across domains by wrapping it in a function call, while **JSONPath** is a querying syntax used to navigate and extract information from JSON documents. They are not the same and serve different roles in web development and data handling.
+
+Citations:
+[1] https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html
+[2] https://stackoverflow.com/questions/2887209/what-are-the-differences-between-json-and-jsonp
+[3] https://www.linkedin.com/pulse/what-differences-between-json-jsonp-islam-hassan
+[4] https://openliberty.io/docs/latest/json-p-b.html
+[5] https://forum.freecodecamp.org/t/jsonp-vs-json-whats-the-difference-explained-with-examples/15990
+[6] https://www.webdevelopment.co.nz/post/json-vs-jsonp-explained-with-detailed-web-request-samples
+[7] https://stackoverflow.com/questions/24349907/what-is-difference-between-json-and-jsonp/24349935
+[8] https://github.com/yaml/yaml/issues/48
