@@ -1,0 +1,13 @@
+{
+  "name": "John McLean",
+  "language": "English",
+  "BirthYear": 1785,
+  "BirthMonth": "11",
+  "DOB": "11-03-1785",
+  "Lifetime": 74.8,
+  "Died_Hex": 1861,
+  "Died_Octal": 1861,
+  "good_man": true,
+  "American": "Yes",
+  "null_vale": null
+}
