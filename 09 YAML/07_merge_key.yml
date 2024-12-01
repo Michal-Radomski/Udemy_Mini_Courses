@@ -1,0 +1,13 @@
+defaults: &defaults
+  key1: value1
+  key2: value2
+
+override:
+  <<: *defaults
+  key2: VALUE
+  key3: value3
+#* Result:
+# override:
+#   key1: value1
+#   key2: VALUE
+#   key3: value3

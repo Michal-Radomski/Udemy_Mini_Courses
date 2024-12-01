@@ -1,4 +1,5 @@
 ---
+# Original version
 definitions:
   steps:
     - step:
@@ -26,6 +27,7 @@ pipelines:
             - target/**
 
 ---
+# With anchors and aliases
 definitions:
   steps:
     - step: &build-test
