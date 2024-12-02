@@ -23,3 +23,5 @@ Udemy.com mini courses with a certificate.
 8. Files created during this course: [Next JS & Open AI / GPT](https://www.udemy.com/course/next-js-ai).
 
 9. Files created during this course: [YAML JSON JSONPath](https://www.udemy.com/course/ultimate-yaml-json-jsonpath-tutorial).
+
+10. Files created during this course: [DevOps Intro](https://www.udemy.com/course/draft/1735956).
