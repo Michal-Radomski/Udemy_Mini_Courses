@@ -29,6 +29,7 @@
   }
 }
 
+//* $ means root element
 // 1. Select All Books: Expression: $.store.book -> All Array!
 
 // 2. Select the Title of the First Book: Expression: $.store.book.title -> "Sayings of the Century"
