@@ -1,0 +1,40 @@
+Continuous Integration (CI) and Continuous Delivery (CD) are essential practices in modern software development, designed to enhance the efficiency and reliability of the software release process. While they are interconnected, they serve distinct purposes within the development lifecycle.
+
+## Continuous Integration (CI)
+
+**Definition**: CI refers to the practice of automatically and frequently integrating code changes from multiple developers into a shared repository. This integration occurs as soon as changes are made, allowing for early detection of integration issues.
+
+**Key Features**:
+- **Automation**: CI involves automated builds and tests that validate code changes before they are merged into the main branch. This helps maintain a stable codebase and reduces the likelihood of integration conflicts[1][2].
+- **Focus on Testing**: Extensive automated testing (e.g., unit tests) is a hallmark of CI, ensuring that new code does not break existing functionality. The goal is to provide rapid feedback to developers, enabling quick resolution of any issues[4][5].
+- **Integration Frequency**: Developers are encouraged to integrate their changes frequently (multiple times a day), which minimizes the complexity associated with large merges later in the development process[3][4].
+
+## Continuous Delivery (CD)
+
+**Definition**: CD encompasses the practices that follow CI, focusing on automating the release process so that code changes can be deployed to production at any time. CD ensures that software is always in a production-ready state.
+
+**Key Features**:
+- **Deployment Automation**: CD automates the deployment process, allowing teams to release updates quickly and reliably. This can involve either continuous delivery (where deployments are prepared but may require manual approval) or continuous deployment (where every change that passes tests is automatically deployed) [1][4].
+- **User-Centric Focus**: The primary aim of CD is to deliver value to end users by ensuring that new features and fixes can be released rapidly and safely. This approach fosters a shorter feedback loop, enabling teams to respond swiftly to user needs[2][5].
+- **Minimal Testing Post-CI**: While CD includes some testing, it typically focuses on ensuring that deployments work correctly in production environments rather than extensive testing like CI[2][3].
+
+## Key Differences Between CI and CD
+
+| Aspect               | Continuous Integration (CI)                       | Continuous Delivery (CD)                       |
+|----------------------|--------------------------------------------------|------------------------------------------------|
+| **Focus**            | Integrating code changes into a shared repository | Automating the deployment process              |
+| **Testing Emphasis** | Extensive automated testing before merging        | Minimal testing post-deployment                |
+| **Deployment State** | Prepares code for release                         | Ensures code is always ready for production    |
+| **Frequency of Action** | Frequent integration of changes                 | Rapid deployment of features                    |
+
+In summary, CI is primarily concerned with integrating and validating code changes continuously, while CD focuses on automating the deployment of those changes to ensure they can be released to users quickly and reliably. Together, they form a cohesive CI/CD pipeline that enhances software development efficiency and quality.
+
+Citations:
+[1] https://devopslaunchpad.com/blog/the-difference-between-ci-and-cd/
+[2] https://codefresh.io/learn/ci-cd/ci-vs-cd-differences-similarities-and-best-practices/
+[3] https://www.reddit.com/r/devops/comments/u3i5a6/what_is_the_difference_between_ci_and_cd/
+[4] https://www.redhat.com/en/topics/devops/what-is-ci-cd
+[5] https://www.geeksforgeeks.org/difference-between-continuous-integration-and-continuous-delivery/
+[6] https://www.browserstack.com/guide/difference-between-continuous-integration-and-continuous-delivery
+[7] https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
+[8] https://www.copado.com/resources/blog/what-is-the-difference-between-ci-and-cd-using-them-together-to-accelerate-the-feedback-loop-cddd
