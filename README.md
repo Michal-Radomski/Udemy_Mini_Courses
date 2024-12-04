@@ -25,3 +25,5 @@ Udemy.com mini courses with a certificate.
 9. Files created during this course: [YAML JSON JSONPath](https://www.udemy.com/course/ultimate-yaml-json-jsonpath-tutorial).
 
 10. Files created during this course: [DevOps Intro](https://www.udemy.com/course/draft/1735956).
+
+11. Files created during this course: [CI/CD with Jenkins](https://www.udemy.com/course/devops-cicd-with-jenkins).
