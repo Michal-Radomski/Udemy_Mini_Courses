@@ -1,0 +1,42 @@
+The differences between Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) revolve around the level of control, management, and the specific resources provided to users. Here’s a detailed breakdown:
+
+### **1. Infrastructure as a Service (IaaS)**
+- **Definition**: IaaS provides virtualized computing resources over the internet. It allows organizations to rent IT infrastructure such as servers, storage, and networking on a pay-as-you-go basis.
+- **Control**: Users have significant control over the operating systems and applications running on the infrastructure but do not manage the underlying hardware.
+- **Use Cases**: Ideal for businesses that need to build and manage their own applications without investing in physical hardware. Commonly used for hosting websites, storage, and backup solutions.
+- **Examples**: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform.
+
+### **2. Platform as a Service (PaaS)**
+- **Definition**: PaaS provides a platform allowing developers to build, deploy, and manage applications without dealing with the complexities of managing the underlying infrastructure.
+- **Control**: Users focus on application development while the provider manages the infrastructure, operating systems, and middleware.
+- **Use Cases**: Best suited for developers who want to create applications quickly without worrying about the underlying hardware or software layers. It supports application development with built-in tools for coding, testing, and deployment.
+- **Examples**: Google App Engine, Heroku, Red Hat OpenShift.
+
+### **3. Software as a Service (SaaS)**
+- **Definition**: SaaS delivers software applications over the internet on a subscription basis. Users access these applications via web browsers without needing to install or maintain them locally.
+- **Control**: Users have minimal control over the software; they typically cannot customize it extensively beyond user settings.
+- **Use Cases**: Ideal for businesses looking for ready-to-use applications that require no installation or maintenance. Commonly used for email, customer relationship management (CRM), and collaboration tools.
+- **Examples**: Google Workspace (formerly G Suite), Salesforce, Dropbox.
+
+### **Comparison Table**
+
+| Feature                          | IaaS                                      | PaaS                                       | SaaS                                      |
+|----------------------------------|-------------------------------------------|--------------------------------------------|-------------------------------------------|
+| **Definition**                   | Virtualized IT infrastructure             | Platform for developing applications       | Software applications delivered online     |
+| **Control Level**                | High control over OS and apps             | Moderate control; focus on app development | Low control; limited customization         |
+| **Management Responsibility**    | User manages OS and applications           | Provider manages infrastructure             | Provider manages everything                 |
+| **Target Users**                 | IT administrators, developers              | Developers                                  | End-users/businesses                       |
+| **Examples**                     | AWS EC2, Microsoft Azure                   | Google App Engine, Heroku                  | Google Workspace, Salesforce               |
+
+### Summary
+In summary, IaaS offers foundational infrastructure that users can fully control; PaaS provides a managed platform for application development with less overhead; while SaaS delivers fully managed software solutions directly to users without requiring any installation or maintenance. Each model serves different needs based on how much control and management users want over their computing resources.
+
+Citations:
+[1] https://polcom.com.pl/en/uncategorized-en/knowledge-base-uncategorized-en/what-are-differences-between-iaas-paas-and-saas/
+[2] https://blog.hubspot.com/service/iaas-paas-saas
+[3] https://www.bigcommerce.com/articles/ecommerce/saas-vs-paas-vs-iaas/
+[4] https://cloud.google.com/learn/paas-vs-iaas-vs-saas
+[5] https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/
+[6] https://www.geeksforgeeks.org/difference-between-iaas-paas-and-saas/
+[7] https://www.redhat.com/en/topics/cloud-computing/iaas-vs-paas-vs-saas
+[8] https://www.ibm.com/topics/iaas-paas-saas
