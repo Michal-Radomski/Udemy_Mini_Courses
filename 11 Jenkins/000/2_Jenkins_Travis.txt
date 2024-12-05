@@ -1,4 +1,4 @@
-Jenkins and Travis CI are both popular tools used for Continuous Integration (CI) and Continuous Deployment (CD), but they differ significantly in their architecture, features, and use cases. Here’s a detailed comparison of the two:
+Jenkins and Travis CI are both popular tools used for Continuous Integration (CI) and Continuous Deployment (CD), but they differ significantly in their architecture, features, and use cases. Here's a detailed comparison of the two:
 
 ## Overview
 
