@@ -26,3 +26,5 @@ Udemy.com mini courses with a certificate.
 10. Files created during this course: [DevOps Intro](https://www.udemy.com/course/draft/1735956).
 
 11. Files created during this course: [CI/CD with Jenkins](https://www.udemy.com/course/devops-cicd-with-jenkins).
+
+12. Files created during this course: [Inkscape](https://www.udemy.com/course/inkscape-icon-design).
