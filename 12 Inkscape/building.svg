@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+  width="200.0px"
+  height="200.0px"
+  viewBox="0 0 200.0 200.0"
+  version="1.1"
+  id="SVGRoot"
+  sodipodi:docname="building.svg"
+  inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <sodipodi:namedview
+    id="namedview17223"
+    pagecolor="#ffffff"
+    bordercolor="#666666"
+    borderopacity="1.0"
+    inkscape:showpageshadow="2"
+    inkscape:pageopacity="0.0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#d1d1d1"
+    inkscape:document-units="px"
+    showgrid="true"
+    inkscape:zoom="2.5121536"
+    inkscape:cx="123.79816"
+    inkscape:cy="106.68138"
+    inkscape:window-width="1920"
+    inkscape:window-height="1011"
+    inkscape:window-x="0"
+    inkscape:window-y="32"
+    inkscape:window-maximized="1"
+    inkscape:current-layer="layer1"
+  >
+    <inkscape:grid type="xygrid" id="grid17229" />
+  </sodipodi:namedview>
+  <defs id="defs17218" />
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <rect
+      style="fill: #000000; stroke: #ffffff; stroke-width: 2; fill-opacity: 1"
+      id="rect17288"
+      width="188.0479"
+      height="189.49693"
+      x="5.664382"
+      y="4.4748278"
+      rx="20"
+      ry="20"
+    />
+    <rect
+      style="fill: #ffffff; fill-opacity: 1; stroke: #ffffff; stroke-width: 2"
+      id="rect17822"
+      width="132.6028"
+      height="153.41388"
+      x="37.277298"
+      y="24.214485"
+    />
+    <rect
+      style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+      id="rect17824"
+      width="22.561171"
+      height="31.377636"
+      x="87.913292"
+      y="147.70222"
+    />
+    <g id="g19391" transform="translate(-0.5380338,-4.2539899)">
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826"
+        width="23.197723"
+        height="33.568645"
+        x="46.379147"
+        y="33.794754"
+      />
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-6"
+        width="23.197723"
+        height="33.568645"
+        x="127.35307"
+        y="34.655426"
+      />
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-7"
+        width="23.197723"
+        height="33.568645"
+        x="87.070831"
+        y="34.634735"
+      />
+    </g>
+    <g id="g19391-3" transform="translate(0,36.387314)">
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-5"
+        width="23.197723"
+        height="33.568645"
+        x="46.379147"
+        y="33.794754"
+      />
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-6-6"
+        width="23.197723"
+        height="33.568645"
+        x="127.35307"
+        y="34.655426"
+      />
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-7-2"
+        width="23.197723"
+        height="33.568645"
+        x="87.070831"
+        y="34.634735"
+      />
+    </g>
+    <g id="g19391-9" transform="translate(0.38506672,75.661334)">
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-1"
+        width="23.197723"
+        height="33.568645"
+        x="46.379147"
+        y="33.794754"
+      />
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-6-2"
+        width="23.197723"
+        height="33.568645"
+        x="127.35307"
+        y="34.655426"
+      />
+      <rect
+        style="fill: #000000; fill-opacity: 1; stroke: none; stroke-width: 2"
+        id="rect17826-7-7"
+        width="23.197723"
+        height="33.568645"
+        x="87.070831"
+        y="34.634735"
+      />
+    </g>
+  </g>
+</svg>
