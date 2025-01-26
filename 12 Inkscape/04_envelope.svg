@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+  width="200.0px"
+  height="200.0px"
+  viewBox="0 0 200.0 200.0"
+  version="1.1"
+  id="SVGRoot"
+  sodipodi:docname="04_envelope.svg"
+  inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <sodipodi:namedview
+    id="namedview1078"
+    pagecolor="#ffffff"
+    bordercolor="#666666"
+    borderopacity="1.0"
+    inkscape:showpageshadow="2"
+    inkscape:pageopacity="0.0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#d1d1d1"
+    inkscape:document-units="px"
+    showgrid="true"
+    inkscape:zoom="4.04"
+    inkscape:cx="100"
+    inkscape:cy="100"
+    inkscape:window-width="1920"
+    inkscape:window-height="1011"
+    inkscape:window-x="0"
+    inkscape:window-y="32"
+    inkscape:window-maximized="1"
+    inkscape:current-layer="layer1"
+  >
+    <inkscape:grid type="xygrid" id="grid1564" />
+  </sodipodi:namedview>
+  <defs id="defs1073" />
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <rect
+      style="
+        fill: #0000ff;
+        fill-opacity: 1;
+        stroke: none;
+        stroke-width: 7.55906;
+        stroke-miterlimit: 0;
+        paint-order: markers fill stroke;
+      "
+      id="rect2399"
+      width="190.7695"
+      height="189.62715"
+      x="5.3898578"
+      y="5.0284915"
+      ry="18.897638"
+    />
+    <rect
+      style="
+        fill: #ffffff;
+        fill-opacity: 1;
+        stroke: none;
+        stroke-width: 10.5519;
+        stroke-miterlimit: 0;
+        paint-order: markers fill stroke;
+      "
+      id="rect3957"
+      width="158.44266"
+      height="125.55575"
+      x="21.821646"
+      y="33.482597"
+      rx="4.8712544"
+      ry="5.7142901"
+    />
+    <path
+      sodipodi:type="star"
+      style="
+        fill: #ffffff;
+        fill-opacity: 1;
+        stroke: #0000ff;
+        stroke-width: 5.07405;
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+        stroke-miterlimit: 0;
+        stroke-dasharray: none;
+        stroke-opacity: 1;
+        paint-order: markers fill stroke;
+      "
+      id="path6353"
+      inkscape:flatsided="true"
+      sodipodi:sides="3"
+      sodipodi:cx="80.094627"
+      sodipodi:cy="15.803251"
+      sodipodi:r1="68.415176"
+      sodipodi:r2="34.207588"
+      sodipodi:arg1="0.50588977"
+      sodipodi:arg2="1.5530873"
+      inkscape:rounded="0"
+      inkscape:randomized="0"
+      d="M 139.94037,48.956285 21.460388,51.054667 78.883126,-52.601198 Z"
+      inkscape:transform-center-x="0.39622482"
+      inkscape:transform-center-y="14.47837"
+      transform="matrix(-1.315745,-0.00664402,0.01171798,-0.86143279,205.11171,78.305879)"
+    />
+    <path
+      style="
+        fill: none;
+        stroke: #0000ff;
+        stroke-width: 5.87769;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-dasharray: none;
+        stroke-opacity: 1;
+      "
+      d="m 20.865111,158.43362 72.1376,-43.07176"
+      id="path15358"
+    />
+    <path
+      style="
+        fill: none;
+        stroke: #0000ff;
+        stroke-width: 5.82204;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-dasharray: none;
+        stroke-opacity: 1;
+      "
+      d="m 108.52801,115.70671 71.60075,42.94368"
+      id="path15360"
+    />
+  </g>
+</svg>
