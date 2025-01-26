@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+  width="200.0px"
+  height="200.0px"
+  viewBox="0 0 200.0 200.0"
+  version="1.1"
+  id="SVGRoot"
+  sodipodi:docname="03_cassette.svg"
+  inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <sodipodi:namedview
+    id="namedview1963"
+    pagecolor="#ffffff"
+    bordercolor="#666666"
+    borderopacity="1.0"
+    inkscape:showpageshadow="2"
+    inkscape:pageopacity="0.0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#d1d1d1"
+    inkscape:document-units="px"
+    showgrid="true"
+    inkscape:zoom="3.011083"
+    inkscape:cx="154.76159"
+    inkscape:cy="111.91986"
+    inkscape:window-width="1920"
+    inkscape:window-height="1011"
+    inkscape:window-x="0"
+    inkscape:window-y="32"
+    inkscape:window-maximized="1"
+    inkscape:current-layer="layer1"
+  >
+    <inkscape:grid type="xygrid" id="grid2449" />
+  </sodipodi:namedview>
+  <defs id="defs1958">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4515">
+      <rect
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 0.982531;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+        id="rect4517"
+        width="33.039787"
+        height="9.3105316"
+        x="9.9397888"
+        y="264.56476"
+      />
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4515-3">
+      <rect
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 0.982531;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+        id="rect4517-3"
+        width="33.039787"
+        height="9.3105316"
+        x="9.9397888"
+        y="264.56476"
+      />
+    </clipPath>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <g id="g4565" transform="matrix(3.7795276,0,0,3.7795276,-3.4257468,-921.79194)" style="display: inline">
+      <rect
+        y="264.56476"
+        x="10.950517"
+        height="9.3105316"
+        width="32.109642"
+        id="rect4496"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 0.968602;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+      <rect
+        y="253.02838"
+        x="3.1680996"
+        height="30.814356"
+        width="47.674473"
+        id="rect4485"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 1.97165;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+      <path
+        sodipodi:nodetypes="ccccc"
+        inkscape:connector-curvature="0"
+        id="path4487"
+        d="m 12.270012,253.56869 3.116943,4.34313 h 23.44201 l 2.911693,-4.27631 z"
+        style="
+          fill: none;
+          stroke: #c9c9c9;
+          stroke-width: 1.47874;
+          stroke-linecap: butt;
+          stroke-linejoin: round;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+        "
+      />
+      <path
+        inkscape:connector-curvature="0"
+        id="rect4491"
+        d="M 6.8517767,261.90528 V 279.011 c 0,1.15902 0.6292643,2.09163 1.4113155,2.09163 H 45.747092 c 0.782053,0 1.411805,-0.93261 1.411805,-2.09163 v -17.10572 z"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 1.47874;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+      <circle
+        transform="matrix(0.9718477,0,0,1,1.2905557,0)"
+        clip-path="url(#clipPath4515)"
+        r="6.0256209"
+        cy="269.24817"
+        cx="14.326955"
+        id="path4498"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 1;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+      <circle
+        transform="matrix(-0.9718477,0,0,1,52.815362,0)"
+        clip-path="url(#clipPath4515-3)"
+        r="6.0256209"
+        cy="269.24817"
+        cx="14.326955"
+        id="path4498-8"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 1;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+      <ellipse
+        ry="3.587137"
+        rx="3.4861507"
+        cy="269.27615"
+        cx="14.945123"
+        id="path4540"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 1.74957;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+      <ellipse
+        ry="3.587137"
+        rx="3.4861507"
+        cy="269.27615"
+        cx="39.05085"
+        id="path4540-3"
+        style="
+          fill: none;
+          fill-opacity: 1;
+          stroke: #c9c9c9;
+          stroke-width: 1.74957;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-miterlimit: 4;
+          stroke-dasharray: none;
+          stroke-opacity: 1;
+          paint-order: markers fill stroke;
+        "
+      />
+    </g>
+  </g>
+</svg>
