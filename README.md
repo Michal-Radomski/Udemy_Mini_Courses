@@ -28,3 +28,5 @@ Udemy.com mini courses with a certificate.
 11. Files created during this course: [CI/CD with Jenkins](https://www.udemy.com/course/devops-cicd-with-jenkins).
 
 12. Files created during this course: [Inkscape](https://www.udemy.com/course/inkscape-icon-design).
+
+13. Files created during this course: [Typing Mastery](https://www.udemy.com/course/learn-to-type).
