@@ -30,3 +30,7 @@ Udemy.com mini courses with a certificate.
 12. Files created during this course: [Inkscape](https://www.udemy.com/course/inkscape-icon-design).
 
 13. Files created during this course: [Typing Mastery](https://www.udemy.com/course/learn-to-type).
+
+14. Files created during this course: [Protocol Buffers 3](https://www.udemy.com/course/protocol-buffers) - Python Only.
+
+15. Files created during this course: [gRPC [Node.js]](https://www.udemy.com/course/grpc-nodejs).
