@@ -1,14 +1,14 @@
 syntax = "proto3";
 
 enum EyeColor {
-  EYE_COLOR_UNSPECIFIED = 0;
+  EYE_COLOR_UNSPECIFIED = 0; // default - one line comment
   EYE_COLOR_GREEN = 1;
   EYE_COLOR_BLUE = 2;
   EYE_COLOR_BROWN = 3;
 }
 
 /*  Account
-    Used to identify someone in our system
+    Used to identify someone in our system (multiline comment)
 */
 message Account {
   uint32 id = 1;
