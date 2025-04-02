@@ -16,7 +16,7 @@ cat simple.bin | protoc --decode_raw
 > Read a binary message of the given type from standard input and write it in text format to standard output. The message
 > type must be defined in PROTO_FILES or their imports.
 
-### Example usage
+### Example usage_1
 
 ```shell
 cat simple.bin | protoc --decode=Simple simple.proto > simple.txt
@@ -31,7 +31,7 @@ cat simple.bin | protoc --decode=simple.Simple simple.proto > simple.txt
 > Read a text-format message of the given type from standard input and write it in binary to standard output. The message
 > type must be defined in PROTO_FILES or their imports.
 
-### Example usage
+### Example usage_2
 
 ```shell
 cat simple.txt | protoc --encode=Simple simple.proto > simple.pb

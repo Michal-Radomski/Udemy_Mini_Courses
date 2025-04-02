@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-import "package.proto";
+
+import "14 Protobuf/02/package.proto";
 
 message MessageSeven {
   my.package.MessageSix six = 1;

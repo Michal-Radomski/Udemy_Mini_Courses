@@ -1,9 +1,7 @@
 syntax = "proto3";
 
-import "1_same_level_message.proto";
+import "14 Protobuf/02/1_same_level_message.proto";
 
 message MessageFive {
   MessageOne one = 1;
 }
-
-
