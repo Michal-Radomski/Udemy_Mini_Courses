@@ -15,6 +15,19 @@ make generate
 
 ### Run
 
-```
+```shell
 python3 main.py
+```
+
+## Remove
+
+```shell
+deactivate
+rm -rf venv
+```
+
+## Other commands
+
+```shell
+pip show protobuf
 ```
