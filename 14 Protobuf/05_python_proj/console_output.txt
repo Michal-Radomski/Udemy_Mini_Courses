@@ -1,0 +1,84 @@
+id: 42
+is_simple: true
+name: "My name"
+sample_lists: 3
+sample_lists: 4
+sample_lists: 5
+
+one_dummy {
+  id: 42
+  name: "My name"
+}
+multiple_dummies {
+  id: 43
+  name: "My name 2"
+}
+multiple_dummies {
+  id: 44
+  name: "My name 3"
+}
+multiple_dummies {
+  id: 45
+  name: "My name 4"
+}
+
+eye_color: EYE_COLOR_GREEN
+
+message: "message"
+
+id: 42
+
+ids {
+  key: "myid"
+  value {
+    id: 42
+  }
+}
+ids {
+  key: "myid3"
+  value {
+    id: 44
+  }
+}
+ids {
+  key: "myid2"
+  value {
+    id: 43
+  }
+}
+
+Write to file
+id: 42
+is_simple: true
+name: "My name"
+sample_lists: 3
+sample_lists: 4
+sample_lists: 5
+
+Read from file
+id: 42
+is_simple: true
+name: "My name"
+sample_lists: 3
+sample_lists: 4
+sample_lists: 5
+
+{"oneDummy": {"id": 42, "name": "My name"}, "multipleDummies": [{"id": 43, "name": "My name 2"}, {"id": 44, "name": "My name 3"}, {"id": 45, "name": "My name 4"}]}
+one_dummy {
+  id: 42
+  name: "My name"
+}
+multiple_dummies {
+  id: 43
+  name: "My name 2"
+}
+multiple_dummies {
+  id: 44
+  name: "My name 3"
+}
+multiple_dummies {
+  id: 45
+  name: "My name 4"
+}
+
+id: 42
