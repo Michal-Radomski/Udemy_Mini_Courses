@@ -40,3 +40,14 @@ cat simple.txt | protoc --encode=Simple simple.proto > simple.pb
 ```shell
 cat simple.txt | protoc --encode=simple.Simple simple.proto > simple.pb
 ```
+
+### commands
+
+```shell
+protoc --java_out=java --python_out=python simple.proto
+
+npm install -g protoc-gen-js
+protoc --js_out=import_style=commonjs,binary:. simple.proto
+```
+
+[Tutorial](https://medium.com/@guptaaashutosh/how-to-generate-grpc-code-in-javascript-8c70d3540c20)

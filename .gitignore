@@ -43,3 +43,4 @@ __pycache__
 simple.bin
 venv
 requirements.txt-e
+*_pb.js
