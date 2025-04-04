@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package example;
+
+// Define a message structure
+message User {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+}
