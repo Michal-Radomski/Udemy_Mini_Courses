@@ -5,7 +5,7 @@
 #   and optionally some other .proto files
 
 # echo -n test
-# ./node_modules/.bin/grpc_tools_node_protoc --js_out=. --grpc_out=. greet/proto/greet.proto
+./node_modules/.bin/grpc_tools_node_protoc --js_out=. --grpc_out=. greet/proto/greet.proto
 
 argc=$#
 argv=("$@")
