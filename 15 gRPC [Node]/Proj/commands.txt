@@ -1,1 +1,2 @@
 ./node_modules/.bin/grpc_tools_node_protoc --js_out=. --grpc_out=. dummy.proto
+./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. greet/proto/greet.proto
