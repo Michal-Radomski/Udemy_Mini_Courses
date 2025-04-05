@@ -2,7 +2,9 @@
   "name": "proj",
   "version": "1.0.0",
   "description": "gRPC course project",
-  "scripts": {},
+  "scripts": {
+    "pb:gen": "./scripts/gen.sh greet"
+  },
   "keywords": [],
   "author": "Michal Radomski <michalra@op.pl>",
   "license": "MIT",
