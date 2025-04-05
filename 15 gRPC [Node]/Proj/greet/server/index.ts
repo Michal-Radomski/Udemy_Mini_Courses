@@ -4,7 +4,7 @@ import * as grpc from "@grpc/grpc-js";
 const service = require("../proto/greet_grpc_pb");
 const serviceImpl = require("./service_impl");
 
-const addr = "0.0.0.0:50051";
+const addr = "0.0.0.0:50051"; //* Listen on all available network interfaces on the machine.
 
 function cleanup(server: grpc.Server): void {
   console.log("Cleanup");
