@@ -1,8 +1,8 @@
 import fs from "fs";
-import grpc from "@grpc/grpc-js";
+import * as grpc from "@grpc/grpc-js";
 
-const service = require("../proto/greet_grpc_pb");
-const serviceImpl = require("./service_impl");
+// const service = require("../proto/greet_grpc_pb");
+// const serviceImpl = require("./service_impl");
 
 const addr = "0.0.0.0:50051";
 
@@ -22,7 +22,7 @@ function main(): void {
     cleanup(server);
   });
 
-  const tls = true;
+  const tls = false;
   let creds;
 
   if (tls) {
@@ -40,15 +40,13 @@ function main(): void {
     creds = grpc.ServerCredentials.createInsecure();
   }
 
-  server.addService(service.GreetServiceService, serviceImpl);
+  // server.addService(service.GreetServiceService, serviceImpl);
   server.bindAsync(addr, creds, (err, _) => {
     if (err) {
       return cleanup(server);
     }
-
     server.start();
   });
-
   console.log("Listening on: " + addr);
 }
 

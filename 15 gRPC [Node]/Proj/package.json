@@ -4,8 +4,8 @@
   "description": "gRPC course project",
   "scripts": {
     "pb:gen": "./scripts/gen.sh greet",
-    "greet:server": "node greet/server/index.ts",
-    "greet:client": "node greet/client/index.ts"
+    "greet:server": "nodemon greet/server/index.ts",
+    "greet:client": "nodemon greet/client/index.ts"
   },
   "keywords": [],
   "author": "Michal Radomski <michalra@op.pl>",
