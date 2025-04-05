@@ -13,6 +13,8 @@ exports.greetManyTimes = (call, _) => {
   const res = new pb.GreetResponse();
 
   for (let i = 0; i < 10; ++i) {
+    // console.log("res:", res);
+    // console.log({ i });
     res.setResult(`Hello ${call.request.getFirstName()} - number ${i}`);
     call.write(res);
   }
