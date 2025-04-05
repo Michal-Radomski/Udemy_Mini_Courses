@@ -21,36 +21,36 @@ const { DATA } = require("../../constants");
 //   });
 // }
 
-function doGreetManyTimes(client: any) {
-  console.log("doGreetManyTimes was invoked");
-  const req = new GreetRequest().setFirstName("TestName");
-  const call = client.greetManyTimes(req);
-  // console.log("call:", call);
+// function doGreetManyTimes(client: any) {
+//   console.log("doGreetManyTimes was invoked");
+//   const req = new GreetRequest().setFirstName("TestName");
+//   const call = client.greetManyTimes(req);
+//   // console.log("call:", call);
 
-  call.on(DATA, (res: any) => {
-    console.log(`GreetManyTimes: ${res.getResult()}`);
-  });
-}
-
-// function doLongGreet(client: any) {
-//   console.log("doLongGreet was invoked");
-//   const names = ["TestName", "TestName2", "TestName3"];
-//   const call = client.longGreet((err: Error, res: any) => {
-//     if (err) {
-//       return console.error(err);
-//     }
-
-//     console.log(`LongGreet: ${res.getResult()}`);
+//   call.on(DATA, (res: any) => {
+//     console.log(`GreetManyTimes: ${res.getResult()}`);
 //   });
-
-//   names
-//     .map((name) => {
-//       return new GreetRequest().setFirstName(name);
-//     })
-//     .forEach((req) => call.write(req));
-
-//   call.end();
 // }
+
+function doLongGreet(client: any) {
+  console.log("doLongGreet was invoked");
+  const names = ["TestName", "TestName2", "TestName3"];
+  const call = client.longGreet((err: Error, res: any) => {
+    if (err) {
+      return console.error(err);
+    }
+
+    console.log(`LongGreet: ${res.getResult()}`);
+  });
+
+  names
+    .map((name) => {
+      return new GreetRequest().setFirstName(name);
+    })
+    .forEach((req) => call.write(req));
+
+  call.end();
+}
 
 // function doGreetEveryone(client: any) {
 //   console.log("doGreetEveryone was invoked");
@@ -106,8 +106,8 @@ function doGreetManyTimes(client: any) {
   // console.log("client:", client);
 
   // doGreet(client);
-  doGreetManyTimes(client);
-  // doLongGreet(client);
+  // doGreetManyTimes(client);
+  doLongGreet(client);
   // doGreetEveryone(client);
   // doGreetWithDeadline(client, 5000);
   // doGreetWithDeadline(client, 1000);
