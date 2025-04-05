@@ -1,97 +1,97 @@
 import fs from "fs";
-import grpc from "@grpc/grpc-js";
+import * as grpc from "@grpc/grpc-js";
 
 const { GreetRequest } = require("../proto/greet_pb");
 const { GreetServiceClient } = require("../proto/greet_grpc_pb");
 const { DATA } = require("../../constants");
 
 // eslint-disable-next-line no-unused-vars
-function doGreet(client: any) {
-  console.log("doGreet was invoked");
-  const req = new GreetRequest().setFirstName("Clement");
+// function doGreet(client: any) {
+//   console.log("doGreet was invoked");
+//   const req = new GreetRequest().setFirstName("Clement");
 
-  client.greet(req, (err: Error, res: any) => {
-    if (err) {
-      return console.log(err);
-    }
+//   client.greet(req, (err: Error, res: any) => {
+//     if (err) {
+//       return console.log(err);
+//     }
 
-    console.log(`Greet: ${res.getResult()}`);
-  });
-}
-
-// eslint-disable-next-line no-unused-vars
-function doGreetManyTimes(client: any) {
-  console.log("doGreetManyTimes was invoked");
-  const req = new GreetRequest().setFirstName("Clement");
-  const call = client.greetManyTimes(req);
-
-  call.on(DATA, (res: any) => {
-    console.log(`GreetManyTimes: ${res.getResult()}`);
-  });
-}
+//     console.log(`Greet: ${res.getResult()}`);
+//   });
+// }
 
 // eslint-disable-next-line no-unused-vars
-function doLongGreet(client: any) {
-  console.log("doLongGreet was invoked");
-  const names = ["Clement", "Marie", "Test"];
-  const call = client.longGreet((err: Error, res: any) => {
-    if (err) {
-      return console.error(err);
-    }
+// function doGreetManyTimes(client: any) {
+//   console.log("doGreetManyTimes was invoked");
+//   const req = new GreetRequest().setFirstName("Clement");
+//   const call = client.greetManyTimes(req);
 
-    console.log(`LongGreet: ${res.getResult()}`);
-  });
-
-  names
-    .map((name) => {
-      return new GreetRequest().setFirstName(name);
-    })
-    .forEach((req) => call.write(req));
-
-  call.end();
-}
+//   call.on(DATA, (res: any) => {
+//     console.log(`GreetManyTimes: ${res.getResult()}`);
+//   });
+// }
 
 // eslint-disable-next-line no-unused-vars
-function doGreetEveryone(client: any) {
-  console.log("doGreetEveryone was invoked");
-  const names = ["Clement", "Marie", "Test"];
-  const call = client.greetEveryone();
+// function doLongGreet(client: any) {
+//   console.log("doLongGreet was invoked");
+//   const names = ["Clement", "Marie", "Test"];
+//   const call = client.longGreet((err: Error, res: any) => {
+//     if (err) {
+//       return console.error(err);
+//     }
 
-  call.on(DATA, (res: any) => {
-    console.log(`GreetEveryone: ${res.getResult()}`);
-  });
+//     console.log(`LongGreet: ${res.getResult()}`);
+//   });
 
-  names
-    .map((name) => {
-      return new GreetRequest().setFirstName(name);
-    })
-    .forEach((req) => call.write(req));
+//   names
+//     .map((name) => {
+//       return new GreetRequest().setFirstName(name);
+//     })
+//     .forEach((req) => call.write(req));
 
-  call.end();
-}
+//   call.end();
+// }
 
 // eslint-disable-next-line no-unused-vars
-function doGreetWithDeadline(client: any, ms: number) {
-  console.log("doGreetWithDeadline was invoked");
-  const req = new GreetRequest().setFirstName("Clement");
+// function doGreetEveryone(client: any) {
+//   console.log("doGreetEveryone was invoked");
+//   const names = ["Clement", "Marie", "Test"];
+//   const call = client.greetEveryone();
 
-  client.greetWithDeadline(
-    req,
-    {
-      deadline: new Date(Date.now() + ms),
-    },
-    (err: Error, res: any) => {
-      if (err) {
-        return console.log(err);
-      }
+//   call.on(DATA, (res: any) => {
+//     console.log(`GreetEveryone: ${res.getResult()}`);
+//   });
 
-      console.log(`GreetWithDeadline: ${res.getResult()}`);
-    }
-  );
-}
+//   names
+//     .map((name) => {
+//       return new GreetRequest().setFirstName(name);
+//     })
+//     .forEach((req) => call.write(req));
+
+//   call.end();
+// }
+
+// eslint-disable-next-line no-unused-vars
+// function doGreetWithDeadline(client: any, ms: number) {
+//   console.log("doGreetWithDeadline was invoked");
+//   const req = new GreetRequest().setFirstName("Clement");
+
+//   client.greetWithDeadline(
+//     req,
+//     {
+//       deadline: new Date(Date.now() + ms),
+//     },
+//     (err: Error, res: any) => {
+//       if (err) {
+//         return console.log(err);
+//       }
+
+//       console.log(`GreetWithDeadline: ${res.getResult()}`);
+//     }
+//   );
+// }
 
 function main(): void {
-  const tls = true;
+  const tls = false;
   let creds;
 
   if (tls) {
@@ -104,12 +104,12 @@ function main(): void {
 
   const client = new GreetServiceClient("localhost:50051", creds);
 
-  doGreet(client);
-  doGreetManyTimes(client);
-  doLongGreet(client);
-  doGreetEveryone(client);
-  doGreetWithDeadline(client, 5000);
-  doGreetWithDeadline(client, 1000);
+  // doGreet(client);
+  // doGreetManyTimes(client);
+  // doLongGreet(client);
+  // doGreetEveryone(client);
+  // doGreetWithDeadline(client, 5000);
+  // doGreetWithDeadline(client, 1000);
   client.close();
 }
 
