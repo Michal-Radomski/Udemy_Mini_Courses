@@ -32,33 +32,15 @@ const { DATA } = require("../../constants");
 //   });
 // }
 
-function doLongGreet(client: any) {
-  console.log("doLongGreet was invoked");
-  const names = ["TestName", "TestName2", "TestName3"];
-  const call = client.longGreet((err: Error, res: any) => {
-    if (err) {
-      return console.error(err);
-    }
+// function doLongGreet(client: any) {
+//   console.log("doLongGreet was invoked");
+//   const names = ["TestName", "TestName2", "TestName3"];
+//   const call = client.longGreet((err: Error, res: any) => {
+//     if (err) {
+//       return console.error(err);
+//     }
 
-    console.log(`LongGreet: ${res.getResult()}`);
-  });
-
-  names
-    .map((name) => {
-      return new GreetRequest().setFirstName(name);
-    })
-    .forEach((req) => call.write(req));
-
-  call.end();
-}
-
-// function doGreetEveryone(client: any) {
-//   console.log("doGreetEveryone was invoked");
-//   const names = ["TestName", "Marie", "Test"];
-//   const call = client.greetEveryone();
-
-//   call.on(DATA, (res: any) => {
-//     console.log(`GreetEveryone: ${res.getResult()}`);
+//     console.log(`LongGreet: ${res.getResult()}`);
 //   });
 
 //   names
@@ -69,6 +51,24 @@ function doLongGreet(client: any) {
 
 //   call.end();
 // }
+
+function doGreetEveryone(client: any) {
+  console.log("doGreetEveryone was invoked");
+  const names = ["TestName", "Marie", "Test"];
+  const call = client.greetEveryone();
+
+  call.on(DATA, (res: any) => {
+    console.log(`GreetEveryone: ${res.getResult()}`);
+  });
+
+  names
+    .map((name) => {
+      return new GreetRequest().setFirstName(name);
+    })
+    .forEach((req) => call.write(req));
+
+  call.end();
+}
 
 // function doGreetWithDeadline(client: any, ms: number) {
 //   console.log("doGreetWithDeadline was invoked");
@@ -107,8 +107,8 @@ function doLongGreet(client: any) {
 
   // doGreet(client);
   // doGreetManyTimes(client);
-  doLongGreet(client);
-  // doGreetEveryone(client);
+  // doLongGreet(client);
+  doGreetEveryone(client);
   // doGreetWithDeadline(client, 5000);
   // doGreetWithDeadline(client, 1000);
   // client.close();
