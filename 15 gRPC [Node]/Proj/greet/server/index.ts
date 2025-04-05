@@ -14,7 +14,7 @@ function cleanup(server: grpc.Server): void {
   }
 }
 
-function main(): void {
+(function main(): void {
   const server: grpc.Server = new grpc.Server({});
 
   process.on("SIGINT", (): void => {
@@ -48,6 +48,4 @@ function main(): void {
     server.start();
   });
   console.log("Listening on: " + addr);
-}
-
-main();
+})();

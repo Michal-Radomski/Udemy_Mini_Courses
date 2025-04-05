@@ -93,7 +93,7 @@ function doGreet(client: any) {
 //   );
 // }
 
-function main(): void {
+(function main(): void {
   const tls = false;
   let creds;
 
@@ -116,6 +116,4 @@ function main(): void {
   // doGreetWithDeadline(client, 5000);
   // doGreetWithDeadline(client, 1000);
   // client.close();
-}
-
-main();
+})();
