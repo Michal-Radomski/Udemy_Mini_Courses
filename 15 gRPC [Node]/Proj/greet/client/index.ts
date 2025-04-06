@@ -1,10 +1,11 @@
 import fs from "fs";
 import * as grpc from "@grpc/grpc-js";
+
 // console.log("grpc:", grpc);
 
 const { GreetRequest } = require("../proto/greet_pb");
 const { GreetServiceClient } = require("../proto/greet_grpc_pb");
-const { DATA } = require("../../constants");
+import { DATA } from "../../constants";
 // console.log("GreetServiceClient:", GreetServiceClient);
 
 // function doGreet(client: any) {
