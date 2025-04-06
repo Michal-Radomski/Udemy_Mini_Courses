@@ -8,7 +8,7 @@ const { GreetServiceClient } = require("../proto/greet_grpc_pb");
 import { DATA } from "../../constants";
 // console.log("GreetServiceClient:", GreetServiceClient);
 
-// function doGreet(client: any) {
+// function doGreet(client: any): void {
 //   console.log("doGreet was invoked");
 //   const req = new GreetRequest().setFirstName("TestName");
 //   // console.log("req:", req);
@@ -22,7 +22,7 @@ import { DATA } from "../../constants";
 //   });
 // }
 
-// function doGreetManyTimes(client: any) {
+// function doGreetManyTimes(client: any): void {
 //   console.log("doGreetManyTimes was invoked");
 //   const req = new GreetRequest().setFirstName("TestName");
 //   const call = client.greetManyTimes(req);
@@ -33,7 +33,7 @@ import { DATA } from "../../constants";
 //   });
 // }
 
-// function doLongGreet(client: any) {
+// function doLongGreet(client: any): void {
 //   console.log("doLongGreet was invoked");
 //   const names = ["TestName", "TestName2", "TestName3"];
 //   const call = client.longGreet((err: Error, res: any) => {
@@ -53,7 +53,7 @@ import { DATA } from "../../constants";
 //   call.end();
 // }
 
-function doGreetEveryone(client: any) {
+function doGreetEveryone(client: any): void {
   console.log("doGreetEveryone was invoked");
   const names = ["TestName", "Marie", "Test"];
   const call = client.greetEveryone();
@@ -71,7 +71,7 @@ function doGreetEveryone(client: any) {
   call.end();
 }
 
-// function doGreetWithDeadline(client: any, ms: number) {
+// function doGreetWithDeadline(client: any, ms: number): void {
 //   console.log("doGreetWithDeadline was invoked");
 //   const req = new GreetRequest().setFirstName("TestName");
 
@@ -91,13 +91,14 @@ function doGreetEveryone(client: any) {
 // }
 
 (function main(): void {
-  const tls = false;
+  const tls = true;
   let creds;
 
   if (tls) {
-    const rootCert = fs.readFileSync("./ssl/ca.crt");
+    const rootCert: Buffer<ArrayBufferLike> = fs.readFileSync("./ssl/ca.crt");
 
     creds = grpc.ChannelCredentials.createSsl(rootCert);
+    // console.log("creds:", creds);
   } else {
     creds = grpc.ChannelCredentials.createInsecure();
     // console.log("creds:", creds);

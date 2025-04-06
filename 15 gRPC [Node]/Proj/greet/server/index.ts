@@ -22,13 +22,13 @@ function cleanup(server: grpc.Server): void {
     cleanup(server);
   });
 
-  const tls = false;
+  const tls = true;
   let creds;
 
   if (tls) {
-    const rootCert = fs.readFileSync("./ssl/ca.crt");
-    const certChain = fs.readFileSync("./ssl/server.crt");
-    const privateKey = fs.readFileSync("./ssl/server.pem");
+    const rootCert: Buffer<ArrayBufferLike> = fs.readFileSync("./ssl/ca.crt");
+    const certChain: Buffer<ArrayBufferLike> = fs.readFileSync("./ssl/server.crt");
+    const privateKey: Buffer<ArrayBufferLike> = fs.readFileSync("./ssl/server.pem");
 
     creds = grpc.ServerCredentials.createSsl(rootCert, [
       {
@@ -36,6 +36,7 @@ function cleanup(server: grpc.Server): void {
         private_key: privateKey,
       },
     ]);
+    // console.log("creds:", creds);
   } else {
     creds = grpc.ServerCredentials.createInsecure();
   }

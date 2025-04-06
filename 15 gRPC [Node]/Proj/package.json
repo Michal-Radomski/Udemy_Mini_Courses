@@ -7,7 +7,8 @@
     "greet:server": "nodemon greet/server/index.ts",
     "greet:client": "nodemon greet/client/index.ts",
     "calculator:server": "nodemon calculator/server/index.ts",
-    "calculator:client": "nodemon calculator/client/index.ts"
+    "calculator:client": "nodemon calculator/client/index.ts",
+    "ssl:gen": "cd ssl && ../scripts/ssl.sh && cd .."
   },
   "keywords": [],
   "author": "Michal Radomski <michalra@op.pl>",
