@@ -8,7 +8,9 @@
     "greet:client": "nodemon greet/client/index.ts",
     "calculator:server": "nodemon calculator/server/index.ts",
     "calculator:client": "nodemon calculator/client/index.ts",
-    "ssl:gen": "cd ssl && ../scripts/ssl.sh && cd .."
+    "ssl:gen": "cd ssl && ../scripts/ssl.sh && cd ..",
+    "blog:server": "nodemon blog/server/index.ts",
+    "blog:client": "nodemon blog/client/index.ts"
   },
   "keywords": [],
   "author": "Michal Radomski <michalra@op.pl>",
@@ -17,7 +19,8 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.13.2",
     "google-protobuf": "^3.21.4",
-    "grpc": "^1.24.11"
+    "grpc": "^1.24.11",
+    "mongodb": "^6.15.0"
   },
   "devDependencies": {
     "@types/google-protobuf": "^3.15.12",
