@@ -2,13 +2,7 @@
   "name": "04_protoc",
   "version": "1.0.0",
   "description": "gRPC course project",
-  "scripts": {
-    "pb:gen": "./scripts/gen.sh",
-    "greet:server": "nodemon greet/server/index.ts",
-    "greet:client": "nodemon greet/client/index.ts",
-    "calculator:server": "nodemon calculator/server/index.ts",
-    "calculator:client": "nodemon calculator/client/index.ts"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Michal Radomski <michalra@op.pl>",
   "license": "MIT",

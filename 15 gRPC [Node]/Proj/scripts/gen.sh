@@ -7,12 +7,14 @@
 # echo -n test
 # ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. greet/proto/greet.proto
 
-./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/calculator.proto
-./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/avg.proto
-./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/max.proto
-./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/primes.proto
-./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/sqrt.proto
-./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/sum.proto
+# ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/calculator.proto
+# ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/avg.proto
+# ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/max.proto
+# ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/primes.proto
+# ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/sqrt.proto
+# ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. calculator/proto/sum.proto
+
+./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. blog/proto/blog.proto
 
 # argc=$#
 # argv=("$@")
