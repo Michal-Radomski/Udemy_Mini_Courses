@@ -8,7 +8,7 @@ import { DATA, ERROR, END } from "../../constants";
 function createBlog(client: service.BlogServiceClient): Promise<string> {
   console.log("---createBlog was invoked---");
   return new Promise((resolve, reject) => {
-    const req: Blog = new Blog().setAuthorId("Clement").setTitle("My First Blog").setContent("Content of the first blog");
+    const req: Blog = new Blog().setAuthorId("Michal").setTitle("My First Blog").setContent("Content of the first blog");
 
     client.createBlog(req, (err, res) => {
       if (err) {
@@ -46,7 +46,7 @@ function updateBlog(client: service.BlogServiceClient, id: string): Promise<void
   return new Promise<void>((resolve, reject) => {
     const req = new Blog()
       .setId(id)
-      .setAuthorId("not Clement")
+      .setAuthorId("not Michal")
       .setTitle("My First Blog (edited)")
       .setContent("Content of the first blog, with some awesome additions!");
 

@@ -1,3 +1,5 @@
+//Todo: transform into TS?
+
 const pb = require("../proto/greet_pb");
 const { DATA, END } = require("../../constants");
 

@@ -5,6 +5,8 @@ import { Empty } from "google-protobuf/google/protobuf/empty_pb";
 import { Blog, BlogId } from "../proto/blog_pb";
 import { collection } from "./index";
 
+// console.log("Empty:", Empty);
+
 interface DocI {
   _id?: ObjectId;
   author_id: string;
