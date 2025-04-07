@@ -24,6 +24,7 @@ function createBlog(client: service.BlogServiceClient): Promise<string> {
 function readBlog(client: service.BlogServiceClient, id: string): Promise<void> {
   console.log("---readBlog was invoked---");
 
+  //* The void type indicates that the promise does not resolve with any meaningful value. Instead, it resolves with undefined.
   return new Promise<void>((resolve, reject) => {
     const req: BlogId = new BlogId().setId(id);
 
@@ -40,6 +41,8 @@ function readBlog(client: service.BlogServiceClient, id: string): Promise<void> 
 
 function updateBlog(client: service.BlogServiceClient, id: string): Promise<void> {
   console.log("---updateBlog was invoked---");
+
+  //* The void type indicates that the promise does not resolve with any meaningful value. Instead, it resolves with undefined.
   return new Promise<void>((resolve, reject) => {
     const req = new Blog()
       .setId(id)
@@ -60,6 +63,8 @@ function updateBlog(client: service.BlogServiceClient, id: string): Promise<void
 
 function listBlogs(client: service.BlogServiceClient): Promise<void> {
   console.log("---listBlog was invoked---");
+
+  //* The void type indicates that the promise does not resolve with any meaningful value. Instead, it resolves with undefined.
   return new Promise<void>((resolve, reject) => {
     const req = new Empty();
 
@@ -82,6 +87,7 @@ function listBlogs(client: service.BlogServiceClient): Promise<void> {
 function deleteBlog(client: service.BlogServiceClient, id: string): Promise<void> {
   console.log("---deleteBlog was invoked---");
 
+  //* The void type indicates that the promise does not resolve with any meaningful value. Instead, it resolves with undefined.
   return new Promise<void>((resolve, reject) => {
     const req = new BlogId().setId(id);
 
