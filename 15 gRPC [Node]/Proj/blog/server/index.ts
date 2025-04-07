@@ -1,12 +1,15 @@
 import * as grpc from "@grpc/grpc-js";
 import { Collection, Db, MongoClient } from "mongodb";
+import "dotenv/config";
 
 import service from "../proto/blog_grpc_pb";
 import { serviceImpl } from "./service_impl";
 
 const addr = "0.0.0.0:50051";
 
-const uri = "mongodb://root:root@localhost:27017/";
+// const uri = "mongodb://root:root@localhost:27017/"; //* From Course
+const uri = process.env.MONGO_URL as string;
+// console.log({ uri });
 const mongoClient: MongoClient = new MongoClient(uri, {
   connectTimeoutMS: 1000,
   serverSelectionTimeoutMS: 1000,

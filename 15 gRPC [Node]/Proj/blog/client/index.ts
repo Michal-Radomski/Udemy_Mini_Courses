@@ -68,10 +68,10 @@ function listBlogs(client: service.BlogServiceClient): Promise<void> {
   return new Promise<void>((resolve, reject) => {
     const req = new Empty();
 
-    const call = client.listBlogs(req);
+    const call = client.listBlogs(req) as grpc.ClientReadableStream<Blog>;
 
     call.on(DATA, (res) => {
-      console.log(res);
+      console.log("res:", res);
     });
 
     call.on(ERROR, (err) => {
@@ -109,6 +109,8 @@ function deleteBlog(client: service.BlogServiceClient, id: string): Promise<void
   );
 
   const id: string = await createBlog(client);
+  console.log("id:", id);
+
   await readBlog(client, id);
   // await readBlog(client, "aNonExistingId");
   await updateBlog(client, id);
